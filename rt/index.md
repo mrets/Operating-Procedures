@@ -394,6 +394,7 @@ If the Generator Owner wants to remove a generating unit from M-RETS, they shall
   <li>The date the generating unit should be/will be removed from the M-RETS tracking system; This is the same as the final date of generation for which certificates are to be issued, and</li>
   <li>The name of the Reporting Entity, and</li>
   <li>Provide M-RETS with notice whether the Generator is moving to another tracking system and allow M-RETS to release any relevant information about the generator to the tracking System Administrator.</li>
+  </ul>
 
 M-RETS will issue Certificates for any generation that occurs prior to the date of generating unit termination as instructed by the Generator Owner. Because of the lag time between generation and Certificate issuance, this may mean that Certificates will be issued and deposited after the termination date, but only for generation that occurred prior to the termination date. Certificates will be issued for generation that occurred prior to the termination date, but whose meter reading came in within 62 days after the termination date. M-RETS will not issue Certificates for generation that occurs after the termination date.
 
@@ -407,6 +408,7 @@ The Transferor must confirm the following:
   <li>The Organization Name and Organization I.D. of the Transferor.</li>
   <li>The Generator Name and M-RETS I.D.</li>
   <li>The effective date of the change and the last vintage that should be issued to the Transferor.</li>
+  </ol>
 
 The Transferee must confirm the following:
 
