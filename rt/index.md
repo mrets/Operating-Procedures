@@ -407,23 +407,19 @@ If the Generator Owner or Responsible Party ("Transferor") wants to change the O
 
 The Transferor must confirm the following:
 
-a. The Organization Name and Organization I.D. of the Transferor.
-
-b. The Generator Name and M-RETS I.D.
-
-c. The effective date of the change and the last vintage that should be issued to the Transferor.
+<ol>
+  <li>The Organization Name and Organization I.D. of the Transferor.</li>
+  <li>The Generator Name and M-RETS I.D.</li>
+  <li>The effective date of the change and the last vintage that should be issued to the Transferor.</li>
 
 The Transferee must confirm the following:
 
-a. The Organization Name and Organization I.D.
-
-b. The Generator Name and M-RETS I.D.
-
-c. The Account Name and Account I.D. to which the Generator will initially issue Certificates upon competition of the change.
-
-d. The effective date of the change and the first vintage that should be issued to the Transferee.
-
-e. Any changes to the static Generator data (e.g., new Reporting Entity, Eligibilities).
+<ol>
+  <li>The Organization Name and Organization I.D.</li>
+  <li>The Generator Name and M-RETS I.D.</li>
+  <li>The Account Name and Account I.D. to which the Generator will initially issue Certificates upon competition of the change.</li>
+  <li>The effective date of the change and the first vintage that should be issued to the Transferee.</li>
+  <li>Any changes to the static Generator data (e.g., new Reporting Entity, Eligibilities).</li>
 
 Certificates from generation that occurred up to the day the Organization change takes effect will be issued into the Organization that the Generating Unit was associated with at the time the generation occurred.
 
@@ -502,11 +498,11 @@ Self-Reporting Entities and IRE's must document to M-RETS through the generation
 
 ### Section 4.4.7: Carbon Pathways
 
-*            M-RETS supports tracking one or more Carbon Pathways that provide a Carbon Intensity ("CI") tracking. While tracking CI **is not** mandatory, M-RETS encourages generators to submit and track a CI whenever practicable. CI values are expressed in grams of carbon dioxide equivalent per megajoule of energy (*gCO~2~e/MJ*) as well as (*gCO~2~e/Dth*). M-RETS supports either a Full Lifecycle CI or a Partial Lifecycle CI.*
+M-RETS supports tracking one or more Carbon Pathways that provide a Carbon Intensity ("CI") tracking. While tracking CI **is not** mandatory, M-RETS encourages generators to submit and track a CI whenever practicable. CI values are expressed in grams of carbon dioxide equivalent per megajoule of energy (*gCO~2~e/MJ*) as well as (*gCO~2~e/Dth*). M-RETS supports either a Full Lifecycle CI or a Partial Lifecycle CI.
 
-*1. ****Full Lifecycle Carbon Intensity** - takes into account the GHG emissions associated with all of the steps of producing, transporting, and consuming a fuel.*
+**1. Full Lifecycle Carbon Intensity** - takes into account the GHG emissions associated with all of the steps of producing, transporting, and consuming a fuel.*
 
-2. ***Partial Lifecycle Carbon Intensity** -- takes into account the GHG emissions associated with all of the steps of producing a fuel up to the Injection Point or interconnection into the distribution system or interstate transportation system.*
+**2. Partial Lifecycle Carbon Intensity** -- takes into account the GHG emissions associated with all of the steps of producing a fuel up to the Injection Point or interconnection into the distribution system or interstate transportation system.*
 
 Lifecycle CI scores for RNG require an assessment of all sources and sinks of GHGs---from production to end-use---and dividing these emissions by the energy in the gas at a specific point in that lifecycle. The resulting value is measured on a carbon dioxide equivalency basis. This is important because Methane is a short-lived climate pollutant that, according to the Intergovernmental Panel on Climate Change, is up to 84 times as potent a GHG as carbon dioxide.[[3]](#_ftn3)
 
@@ -522,7 +518,7 @@ M-RETS does not require Generator Owners to update the Carbon Pathways at specif
 
 ### Section 4.4.8: IRE Verification Scope
 
-            Certificates reported into the system by an IRE must adhere to a strict standard. Certificates uploaded into the system by an IRE will carry an IRE eligibility. That will indicate the certificates have gone through a strict independent third-party verification. Failure to adhere to the standards agreed to between M-RETS, the Generator Owner, and the IRE may result in removal of a Generator from the M-RETS system, cancellation of any certificates suspected of incorrectly maintaining an IRE eligibility, and removal of the IRE from further participation in M-RETS.
+Certificates reported into the system by an IRE must adhere to a strict standard. Certificates uploaded into the system by an IRE will carry an IRE eligibility. That will indicate the certificates have gone through a strict independent third-party verification. Failure to adhere to the standards agreed to between M-RETS, the Generator Owner, and the IRE may result in removal of a Generator from the M-RETS system, cancellation of any certificates suspected of incorrectly maintaining an IRE eligibility, and removal of the IRE from further participation in M-RETS.
 
 IREs must strictly adhere to the following independent third-party verification process. IRE's may adhere to a stricter process, however, in no case shall an IRE do less than required below.
 
