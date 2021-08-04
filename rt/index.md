@@ -223,15 +223,11 @@ There are three ways that M-RETS Certificates are deposited in an Active Account
 
 There are three ways to withdraw or remove M-RETS Certificates from an Active Account:
 
-1. Transfer the M-RETS Certificates to another of one's own Accounts (e.g.,
-
-retirement), or
+1. Transfer the M-RETS Certificates to another of one's own Accounts (e.g. retirement), or
 
 2. Transfer the M-RETS Certificates to multiple of one's own Accounts, or
 
-3. Transfer the M-RETS Certificates to the Active Account of another M-RETS
-
-Organization.
+3. Transfer the M-RETS Certificates to the Active Account of another M-RETS Organization.
 
 ### Section 4.2.4: Functionality of an Active Account
 
@@ -420,6 +416,7 @@ The Transferee must confirm the following:
   <li>The Account Name and Account I.D. to which the Generator will initially issue Certificates upon competition of the change.</li>
   <li>The effective date of the change and the first vintage that should be issued to the Transferee.</li>
   <li>Any changes to the static Generator data (e.g., new Reporting Entity, Eligibilities).</li>
+  </ol>
 
 Certificates from generation that occurred up to the day the Organization change takes effect will be issued into the Organization that the Generating Unit was associated with at the time the generation occurred.
 
