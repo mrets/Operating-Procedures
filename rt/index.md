@@ -293,7 +293,7 @@ All Generator Owners must first establish an Organization subscription and then 
 
 To register the Generating Unit(s), the owner of the Generating Unit or the Responsible Party must submit to M-RETS the following:
 
-<ul>
+<ol>
   <li>A completed online Generator registration form containing information related to the characteristics of the Generating Unit and associated meter.</li>
   <li>If applicable: A completed [Schedule A from the M-RETS Terms of Use outlining the Generator Owner's Designation of Responsible Party](https://www.mrets.org/wp-content/uploads/2017/12/MRETS-Schedule-A-Modified-12-28-2017.pdf).</li>
   <li>Any documentation requested by M-RETS to verify the registration information
