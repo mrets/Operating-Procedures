@@ -369,13 +369,12 @@ M-RETS requires that Organizations review and accept all Generator data by Janua
 
 In addition to the annual update, Users must notify M-RETS of the following that have the effect of changing static data tracked by M-RETS within 30 calendar days of the effective date and/or knowledge of the change:
 
-a. A change in feedstock and/or Resource type at a Generating Unit, and the date on which the change occurred.
-
-b. A change in Generating Unit ownership (*See* Section 4.3.10: Changing the Organization to which the Generator is Associated).
-
-c. A change to Generator eligibility for any programs or certification tracked by M-RETS. A User may remove an eligibility at any time.
-
-d. A change to any of the "essential generating characteristics".
+<ol>
+  <li>A change in feedstock and/or Resource type at a Generating Unit, and the date on which the change occurred.</li>
+  <li>A change in Generating Unit ownership (*See* Section 4.3.10: Changing the Organization to which the Generator is Associated).</li>
+  <li>A change to Generator eligibility for any programs or certification tracked by M-RETS. A User may remove an eligibility at any time.</li>
+  <li>A change to any of the "essential generating characteristics".</li>
+  </ol>
 
 These changes will put the affected generator into Pending Status. Before M-RETS places the Generator back into Active status, thus updating the static data, M-RETS will verify the Generator meets the changes, such as Program eligibility requirements. In the case where a state requires preapproval, M-RETS will require the appropriate documentation and reserves the right to verify this information with the appropriate state, province, or independent certification body.
 
@@ -395,9 +394,10 @@ If M-RETS has cause to permanently terminate the Generating Utility's participat
 
 If the Generator Owner wants to remove a generating unit from M-RETS, they shall notify the [M-RETS System Administrator via email](mailto:systemadmin@mrets.org) from an email account registered in that Organization with Manage Project privileges with the following information:
 
--   The date the generating unit should be/will be removed from the M-RETS tracking system; This is the same as the final date of generation for which certificates are to be issued, and
--   The name of the Reporting Entity, and
--   Provide M-RETS with notice whether the Generator is moving to another tracking system and allow M-RETS to release any relevant information about the generator to the tracking System Administrator.
+<ul>
+  <li>The date the generating unit should be/will be removed from the M-RETS tracking system; This is the same as the final date of generation for which certificates are to be issued, and</li>
+  <li>The name of the Reporting Entity, and</li>
+  <li>Provide M-RETS with notice whether the Generator is moving to another tracking system and allow M-RETS to release any relevant information about the generator to the tracking System Administrator.</li>
 
 M-RETS will issue Certificates for any generation that occurs prior to the date of generating unit termination as instructed by the Generator Owner. Because of the lag time between generation and Certificate issuance, this may mean that Certificates will be issued and deposited after the termination date, but only for generation that occurred prior to the termination date. Certificates will be issued for generation that occurred prior to the termination date, but whose meter reading came in within 62 days after the termination date. M-RETS will not issue Certificates for generation that occurs after the termination date.
 
