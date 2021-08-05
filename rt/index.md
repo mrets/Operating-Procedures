@@ -760,3 +760,27 @@ At the time of publication, the M-RETS Board of Directors included:
 **Teody Leano**, Manitoba Municipal Government
 
 **Tyler Meulemans**, Public Service Commission of Wisconsin
+
+# Appendix A: Resource Type & Feedstock Source
+
+
+**Resource Type**
+
+|**Resource Type (Short Description)**|**Feedstock (Long Description)**|**Renewable(Y/N)**|**Recycled(Y/N)**|
+|-------------------------------------|--------------------------------|------------------|-----------------|
+|BIG|Biogas|Y|N|
+|BIM|Biomass|Y|N|
+|CO1|Coal|N|N|
+|DI1|Diesel|N|N|
+|FC1|Fuel Cells|Y|N|
+|FLR|Flared Gas|N|Y|
+|GE1|Geothermal Energy|Y|N|
+|HYD|Hydrogen|Y|N|
+|JET|Jet|N|N|
+|MS1|Municipal solid waste|Y|N|
+|NG1|Natural Gas|N|N|
+|NON|Not Listed - Contact M-RETS|N|N|
+|OIL|Oil|N|N|
+|SO1|Solar Thermal|Y|N|
+|WHR|Waste Heat Recovery|Y|N|
+|WO1|Waste Oil|N|N|
