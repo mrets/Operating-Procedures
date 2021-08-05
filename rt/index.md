@@ -736,3 +736,27 @@ M-RETS offers an application programming interface (API) to give Organizations w
 Documentation for the API is accessed through the M-RETS portal. Click on the "Documentation" tab located in the left nav menu to view a list of available calls and technical specifications. The documentation is interactive and allows for the testing of API calls right in the interface.
 
 More information on our API can be found in our [Terms of Use](https://www.mrets.org/wp-content/uploads/2020/10/MRETS-Terms-of-Use-RNG-AND-REC-Effective-January-1-2020.pdf).
+
+# Section 6: Public Reports
+
+M-RETS provides live-updated Public Reports on the M-RETS [Landing Page](https://app.mrets.org/reports/public) subject to the privacy rules contained in the M-RETS Terms of Use.
+
+# Section 7: Acknowledgements
+
+At the time of publication, the M-RETS Board of Directors included:
+
+**Andy Kellen**, WPPI Energy
+
+**Eric Schroeder,** Subject Matter Expert
+
+**Ken Nelson**, Blue Delta Energy, LLC
+
+**Ken Smith**, Ever-Green Energy, Inc.
+
+**Sherian Krause**, MidAmerican Energy Company
+
+**Supria Ranade,** Lightsource BP
+
+**Teody Leano**, Manitoba Municipal Government
+
+**Tyler Meulemans**, Public Service Commission of Wisconsin
