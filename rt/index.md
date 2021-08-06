@@ -90,8 +90,6 @@ Checks may be mailed to:
 
 Midwest Renewable Energy Tracking System, Inc.
 
-M-RETS Operating Procedures
-
 Lockbox 446023
 
 PO Box 64079
@@ -216,21 +214,21 @@ If the Account has a Generating Unit(s) associated with it, the Active Account w
 
 There are three ways that M-RETS Certificates are deposited in an Active Account.
 
-1. The Certificates can be deposited into the Account by M-RETS based on verified generation data from a Generating Unit associated with the Active Account or through an adjustment approved by M-RETS in accordance with the Operating Procedures.
-
-2. The Organization can transfer M-RETS Certificates into their Active Account from another of the Organization's Active Accounts.
-
-3. The Organization can accept a transfer of Certificates from another M-RETS Organization.
+<ol>
+  <li>The Certificates can be deposited into the Account by M-RETS based on verified generation data from a Generating Unit associated with the Active Account or through an adjustment approved by M-RETS in accordance with the Operating Procedures.</li>
+  <li>The Organization can transfer M-RETS Certificates into their Active Account from another of the Organization's Active Accounts.</li>
+  <li>The Organization can accept a transfer of Certificates from another M-RETS Organization.</li>
+  </ol>
 
 ### Section 4.2.3: Transfers from the Active Account
 
 There are three ways to withdraw or remove M-RETS Certificates from an Active Account:
 
-1. Transfer the M-RETS Certificates to another of one's own Accounts (e.g. retirement), or
-
-2. Transfer the M-RETS Certificates to multiple of one's own Accounts, or
-
-3. Transfer the M-RETS Certificates to the Active Account of another M-RETS Organization.
+<ol>
+  <li>Transfer the M-RETS Certificates to another of one's own Accounts (e.g. retirement), or</li>
+  <li>Transfer the M-RETS Certificates to multiple of one's own Accounts, or</li>
+  <li>Transfer the M-RETS Certificates to the Active Account of another M-RETS Organization.</li>
+  </ol>
 
 ### Section 4.2.4: Functionality of an Active Account
 
