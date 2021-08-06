@@ -10,11 +10,11 @@ More information about confidentiality can be found in the [M-RETS Terms of Use.
 
 Every User in M-RETS has customizable permissions. Users can be set as Manage, Read Only, or No Access. Only a User with Manage permissions for the Organization or M-RETS can change permissions. The abilities of each level are as follows:
 
-- Manage: Ability to view and edit the topic
-
-- Read Only: Ability to solely view the topic
-
-- No Access: Inability to view or edit the topic
+<ul>
+  <li>Manage: Ability to view and edit the topic</li>
+  <li>Read Only: Ability to solely view the topic</li>
+  <li>No Access: Inability to view or edit the topic</li>
+  </ul>
 
 #### Section 4.1.1.1: Organization Permission
 
