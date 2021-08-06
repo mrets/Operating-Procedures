@@ -2,7 +2,7 @@
 
 ### Section 4.5.1: Certificate Creation
 
-Small generators (1 to 150 Dth/year) have up to one year from the generation end date to upload generation. Large generators (>150 Dth/year) have 60 days from the generation end date to upload generation. This applies regardless of whether the generator is self-reporting or uses a IRE. M-RETS must approve any generation outside of these ranges.
+All generators have 60 days from the generation end date to upload generation. This applies regardless of whether the generator is self-reporting or uses a IRE. M-RETS must approve any generation outside of these ranges.
 
 All generation data submitted to M-RETS will undergo an automatic validation process. The process includes an automated verification process that reviews the feasibility of the generation amount, ensures there are no overlapping generation entries, and that there are no lapses in generation information.
 
