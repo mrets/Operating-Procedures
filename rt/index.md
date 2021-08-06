@@ -603,41 +603,56 @@ Certificate Retirement is an action taken by the User to remove a Certificate fr
 
 #### Beneficial Ownership (BBO)
 
-- Formal Definition: With respect to any Certificate, Beneficial Ownership Rights means any contractual or other right to direct or control the sale or other disposition of, or the Retirement of, such Certificate or (ii) any contractual or other right to receive the benefits of such Certificate or any proceeds from the sale or other disposition of such Certificate.
-
-- M-RETS Uses: All retirements for the benefit of an individual owner for a general environmental reason (i.e. company purchasing RTCs to green their thermal operations). Within this Retirement type there are additional options in the "Reason" drop down box. One of the reasons is utility retirement on behalf of all customers. This Reason should be selected when a utility is looking to make a voluntary retirement that can be applied to all customers.
-
-An Additional Details field is provided to allow the User to provide specific information about the sale (i.e. customer name, retirement year) Note: Compliance or Green-e Voluntary programs should not use the Beneficial Ownership retirement type. All state compliance retirements should use the Compliance Retirement Type. Green-e Voluntary Retirements should use the Green-e Thermal Certified Voluntary Market Sale Retirement Type. 
+<ul>
+  <li>Formal Definition: With respect to any Certificate, Beneficial Ownership Rights means any contractual or other right to direct or control the sale or other disposition of, or the Retirement of, such Certificate or (ii) any contractual or other right to receive the benefits of such Certificate or any proceeds from the sale or other disposition of such Certificate.</li>
+  <li>M-RETS Uses: All retirements for the benefit of an individual owner for a general environmental reason (i.e. company purchasing RTCs to green their thermal operations). Within this Retirement type there are additional options in the "Reason" drop down box. One of the reasons is utility retirement on behalf of all customers. This Reason should be selected when a utility is looking to make a voluntary retirement that can be applied to all customers.<li>
+  <li>An Additional Details field is provided to allow the User to provide specific information about the sale (i.e. customer name, retirement year) Note: Compliance or Green-e Voluntary programs should not use the Beneficial Ownership retirement type. All state compliance retirements should use the Compliance Retirement Type. Green-e Voluntary Retirements should use the Green-e Thermal Certified Voluntary Market Sale Retirement Type.</li>
+  </ul>
 
 #### Green-e Thermal Certified Voluntary Market Sale (GRN)/Green-e Gas Program
 
-- M-RETS Uses: All Green-e Retirements. To retire Certificates to substantiate sales made in a given calendar year as "Green-e Energy certified", the party retiring Certificates must have a contract in place with Center for Resource Solutions to make Green-e Thermal certified sales in that year of sale. 
+<ul>
+  <li>M-RETS Uses: All Green-e Retirements. To retire Certificates to substantiate sales made in a given calendar year as "Green-e Energy certified", the party retiring Certificates must have a contract in place with Center for Resource Solutions to make Green-e Thermal certified sales in that year of sale.</li>
+  </ul>
 
 #### Corporate Renewable Claim
 
-- M-RETS Uses: Corporations that want to make claims may use this retirement time. While similar to Beneficial Ownership, it is more explicit regarding the type of claim made by the holder of the certificate. This claim should only be used when the Organization retiring Certificates is the same Organization making use of the claim. If the claim is intended for a different party, the correct selection would be Beneficial Ownership while including the name and other relevant information in the notes.
+<ul>
+  <li>M-RETS Uses: Corporations that want to make claims may use this retirement time. While similar to Beneficial Ownership, it is more explicit regarding the type of claim made by the holder of the certificate. This claim should only be used when the Organization retiring Certificates is the same Organization making use of the claim. If the claim is intended for a different party, the correct selection would be Beneficial Ownership while including the name and other relevant information in the notes.</li>
+  </ul>
 
 #### Green Gas Program
 
-- M-RETS Uses: Utility Green Gas and/or Utility Renewable Natural Gas Programs. Note: "Green-e Energy Certified" Utility Green Pricing Program Retirements should use the Green-e Energy Certified Voluntary Market Sale Retirement Reason. 
+<ul>
+  <li>M-RETS Uses: Utility Green Gas and/or Utility Renewable Natural Gas Programs. Note: "Green-e Energy Certified" Utility Green Pricing Program Retirements should use the Green-e Energy Certified Voluntary Market Sale Retirement Reason. </li>
+  </ul>
 
 ### Section 4.5.5: Compliance Retirement Types
 
 #### State-Regulated Utility Renewable Portfolio Standard / Provincial Utility Portfolio Standard (Compliance) (RPS)
 
-- M-RETS Uses: State-Regulated Utility Renewable Portfolio Standard/Provincial Utility Portfolio Standard (RPS) retirements. 
+<ul>
+  <li>M-RETS Uses: State-Regulated Utility Renewable Portfolio Standard/Provincial Utility Portfolio Standard (RPS) retirements.</li>
+  </ul>
+
 
 *Low Carbon Fuel Standard*
 
-- M-RETS Uses: This should be selected only if the generation subject to this claim will be used for a Low Carbon Fuel Standard Claim. The use of this retirement type is subject to the rules and regulations of any state, federal, or provincial low carbon fuel standard program.
+<ul>
+  <li>M-RETS Uses: This should be selected only if the generation subject to this claim will be used for a Low Carbon Fuel Standard Claim. The use of this retirement type is subject to the rules and regulations of any state, federal, or provincial low carbon fuel standard program.</li>
+  </ul>
 
 *Renewable Fuel Standard*
 
-- M-RETS Uses: This should be selected only if the Certificates subject to this claim will be used for the United States Environmental Protection Agency Renewable Fuel Standard. Use of this retirement type is subject to official rules and regulations of the Renewable Fuel Standard.
+<ul>
+  <li>M-RETS Uses: This should be selected only if the Certificates subject to this claim will be used for the United States Environmental Protection Agency Renewable Fuel Standard. Use of this retirement type is subject to official rules and regulations of the Renewable Fuel Standard.</li>
+  </ul>
 
 *Both Low Carbon Fuel Standard and Renewable Fuel Standard*
 
-- M-RETS Uses: This should be selected only if the Certificates subject to this claim will be used for the United States Environmental Protection Agency Renewable Fuel Standard and the Low Carbon Fuel Standard. Use of this retirement type is subject to official rules and regulations of the Renewable Fuel Standard. It is most often the case that Both will be selected as these attributes are frequently stacked.
+<ul>
+  <li>M-RETS Uses: This should be selected only if the Certificates subject to this claim will be used for the United States Environmental Protection Agency Renewable Fuel Standard and the Low Carbon Fuel Standard. Use of this retirement type is subject to official rules and regulations of the Renewable Fuel Standard. It is most often the case that Both will be selected as these attributes are frequently stacked.</li>
+  </ul>
 
 ### Section 4.5.6: Forced Retirement of Certificates
 
