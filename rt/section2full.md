@@ -1,0 +1,12 @@
+# Section 2: Privacy and Security
+
+
+Except where explicitly granted within the Operating Procedures, [Terms of Use](https://www.mrets.org/wp-content/uploads/2020/10/MRETS-Terms-of-Use-RNG-AND-REC-Effective-January-1-2020.pdf), or by Separate Agreement, M-RETS holds all User information strictly confidential. However, M-RETS provides public reports that include aggregate data available through the public area of the M-RETS website. M-RETS will not disclose any information unless provided comprehensive verification, except if the requesting party is identified as a State or Provincial Regulator. You can find more information about confidentiality in the M-RETS [Terms of Use, Section 11](https://www.mrets.org/wp-content/uploads/2020/10/MRETS-Terms-of-Use-RNG-AND-REC-Effective-January-1-2020.pdf).
+
+M-RETS requires Users to create a secure password with a minimum of 12 characters. M-RETS expressly prohibits the sharing of User credentials. M-RETS requires every person that logs into the System to have their separate User login credentials. M-RETS tracks the specific activities of each User through the unique User ID and password. Failure to adhere to these security recommendations and the [Terms of Use](https://www.mrets.org/wp-content/uploads/2020/10/MRETS-Terms-of-Use-RNG-AND-REC-Effective-January-1-2020.pdf) can lead to loss of access to M-RETS.
+
+M-RETS supports---and strongly encourages---the use of multi-factor authentication ("MFA").[[1]](#_ftn1) MFA is an opt-in process for Organizations for the time being. Our implementation will support receiving the MFA key via SMS, authenticator app, or phone call. Our goal is to make it as flexible as possible, however, to maintain the security of M-RETS and our users we reserve the right to require all users to adopt MFA. If you have any concerns or thoughts you would like to share, please contact <systemadmin@mrets.org>.
+
+* * * * *
+
+[[1]](#_ftnref1) The U.S. Commerce Department National Institute of Standards and Technology ("NIST") defines MFA as," Authentication using two or more factors to achieve authentication. Factors include: (i) something you know (e.g. password/personal identification number (PIN)); (ii) something you have (e.g., cryptographic identification device, token); or (iii) something you are (e.g., biometric). *See* NIST Computer Security Resource Center,<https://csrc.nist.gov/glossary/term/Multi_Factor_Authentication> (last accessed June 2, 2021).
