@@ -30,4 +30,4 @@ Once an Organization accepts an invitation to participate in a Program, the acce
 
 If a User attempts to retire Certificates that do not match the predetermined criteria of the Program, the System blocks the retirement. This prevents the retirement of incorrect Certificates.
 
-A walk-through guide to participating in a Program may be found[here](https://help.mrets.org/within-the-system/programs/participating-in-a-program).
+A walk-through guide to participating in a Program may be found [here](https://help.mrets.org/within-the-system/programs/participating-in-a-program).
