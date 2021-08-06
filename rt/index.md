@@ -54,25 +54,28 @@ Each Organization shall pay an Annual Subscription Fee. A renewal fee will be du
 
 If a subscriber fails to pay their annual Subscription Fee within ninety (90) days of issuance, M-RETS shall close the Organization's access to the System. A User that wishes to reactivate an Inactive Organization due to failure to pay shall be required to pay the full annual Subscription Fee as well as an additional reactivation fee equal to 65% of the current Subscription Fee applicable to the closed Organization.
 
-- **Generator Registration Fee: $1,500/one-time fee** (M-RETS may waive this fee if and only if the Generator meets certain conditions)
-
-o M-RETS requires every Generator to pay a $1,500 one-time registration fee. This fee accounts for the cost of verifying the registration information prior to certificate issuance. However, Generators that register and use an Independent Reporting Entity for the full first year of generation information may have this fee waived if the Independent Reporting Entity verifies through a signed legal attestation that all the information submitted through the registration process is true and correct.
-
-- **Generator Only: No Annual Subscription Fee**
-
--- This Type of Organization can register one or more renewable thermal Generators and have certificates issued to it for its Generators. A Generator Only Account can hold, make outgoing transfers, and withdraw certificates only if they are to be used in another regulatory scheme such as the California Low Carbon Fuel Standard, United States Environmental Protection Agency Renewable Fuel Standard.[[1]](#_ftn1) While Generator Only Accounts do not have annual fees, there may be fees associated with withdrawing certificates.
-
-- **General Subscription: $2,200/year**
-
-o This type of Organization can hold, transfer (outgoing and incoming), retire, and withdraw Certificates as well as register and maintain Generators and have Certificates issued to it for its Generators. This Organization type is the only type that can retire Certificates for compliance with any State or Provincial Compliance programs that utilize MRETS.
-
-- **Independent Reporting Entity (IRE): No Fee**
-
-o Independent Reporting Entity is the control area operator, interconnecting utility, scheduling coordinator, or an independent third-party meter reader and is not affiliated with the owner of the Generator for which the entity is reporting; or the control area operator or interconnecting utility and that is affiliated with the Generator owner, but having sufficient segregation of duties such that the person performing the IRE duties does not have access to transfer or retire Certificates created for that Generator. An IRE must enter into an agreement with M-RETS describing the terms and conditions under which the IRE agrees to conduct business with M-RETS and must report data in accordance with the standards set forth in these Operating Procedures.
-
-- **Program Administrator/Government Regulator: No Fee**
-
-o State regulators, including but not limited to public utility commission and public service commission staff and voluntary market program administrators (e.g., Green-e) may be granted a Program Administrator/Government Regulator Organization. To find out if an Organization qualifies please contact M-RETS at <systemadmin@mrets.org>.
+<ul>
+  <li>Generator Registration Fee: $1,500/one-time fee (M-RETS may waive this fee if and only if the Generator meets certain conditions)</li>
+  <ul>
+    <li>M-RETS requires every Generator to pay a $1,500 one-time registration fee. This fee accounts for the cost of verifying the registration information prior to certificate issuance. However, Generators that register and use an Independent Reporting Entity for the full first year of generation information may have this fee waived if the Independent Reporting Entity verifies through a signed legal attestation that all the information submitted through the registration process is true and correct.</li>
+  </ul>
+  <li>Generator Only: No Annual Subscription Fee</li>
+  <ul>
+    <li>This Type of Organization can register one or more renewable thermal Generators and have certificates issued to it for its Generators. A Generator Only Account can hold, make outgoing transfers, and withdraw certificates only if they are to be used in another regulatory scheme such as the California Low Carbon Fuel Standard, United States Environmental Protection Agency Renewable Fuel Standard.[[1]](#_ftn1) While Generator Only Accounts do not have annual fees, there may be fees associated with withdrawing certificates.</li>
+  </ul>
+  <li>General Subscription: $2,200/year</li>
+  <ul>
+    <li>This type of Organization can hold, transfer (outgoing and incoming), retire, and withdraw Certificates as well as register and maintain Generators and have Certificates issued to it for its Generators. This Organization type is the only type that can retire Certificates for compliance with any State or Provincial Compliance programs that utilize MRETS.</li>
+  </ul>
+  <li>Independent Reporting Entity (IRE): No Fee</li>
+  <ul>
+    <li>Independent Reporting Entity is the control area operator, interconnecting utility, scheduling coordinator, or an independent third-party meter reader and is not affiliated with the owner of the Generator for which the entity is reporting; or the control area operator or interconnecting utility and that is affiliated with the Generator owner, but having sufficient segregation of duties such that the person performing the IRE duties does not have access to transfer or retire Certificates created for that Generator. An IRE must enter into an agreement with M-RETS describing the terms and conditions under which the IRE agrees to conduct business with M-RETS and must report data in accordance with the standards set forth in these Operating Procedures.</li>
+  </ul>
+  <li>Program Administrator/Government Regulator: No Fee</li>
+  <ul>
+    <li>State regulators, including but not limited to public utility commission and public service commission staff and voluntary market program administrators (e.g., Green-e) may be granted a Program Administrator/Government Regulator Organization. To find out if an Organization qualifies please contact M-RETS at <systemadmin@mrets.org>.</li>
+  </ul>
+</ul>
 
 ## Section 3.1: Billing Information
 
