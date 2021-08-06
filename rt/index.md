@@ -447,16 +447,15 @@ When changing the Rights of Registration, M-RETS will confirm that both parties 
 
 The User must also review---and update if necessary---the basic Generator Registration data when the Right of Registration is changed from one party to another.
 
-Section 4.4: Generation
------------------------
+## Section 4.4: Generation
 
 See Figures 1-4 for a graphic representation of the RTC generation process. Any user with Generation Submittal permissions can submit Dth data into M-RETS. Each time M-RETS receives generation data for a generator, the date and quantity of Dths are posted to the Generation Log. Any fractional remainders will not issue certificates but will roll over to the next month of generation. Once uploaded, data will be labeled with one of the following:
 
-- **Accepted**: Applies to all generation less than 1 Dth reported to M-RETS. The system will add this data to the subsequent month of generation for issuance.
-
-- **Issued**: Applies to all generation 1 Dth or greater and indicates the Certificates are now active.
-
-- **Pending**: Generation that fails feasibility and therefore needs M-RETS approval; or generation waiting to receive a 'Feedstock' allocation from a multi-feedstock generator. Pending Generation is not issued and therefore not represented by Active certificates.
+<ul>
+  <li>Accepted: Applies to all generation less than 1 Dth reported to M-RETS. The system will add this data to the subsequent month of generation for issuance.</li>
+  <li>Issued: Applies to all generation 1 Dth or greater and indicates the Certificates are now active.</li>
+  <li>Pending: Generation that fails feasibility and therefore needs M-RETS approval; or generation waiting to receive a 'Feedstock' allocation from a multi-feedstock generator. Pending Generation is not issued and therefore not represented by Active certificates.</li>
+  </ul>
 
 ### Section 4.4.1: Generation Upload Process
 
@@ -500,9 +499,10 @@ Self-Reporting Entities and IRE's must document to M-RETS through the generation
 
 M-RETS supports tracking one or more Carbon Pathways that provide a Carbon Intensity ("CI") tracking. While tracking CI **is not** mandatory, M-RETS encourages generators to submit and track a CI whenever practicable. CI values are expressed in grams of carbon dioxide equivalent per megajoule of energy (*gCO~2~e/MJ*) as well as (*gCO~2~e/Dth*). M-RETS supports either a Full Lifecycle CI or a Partial Lifecycle CI.
 
-**1. Full Lifecycle Carbon Intensity** - takes into account the GHG emissions associated with all of the steps of producing, transporting, and consuming a fuel.*
-
-**2. Partial Lifecycle Carbon Intensity** -- takes into account the GHG emissions associated with all of the steps of producing a fuel up to the Injection Point or interconnection into the distribution system or interstate transportation system.*
+<ol>
+  <li>Full Lifecycle Carbon Intensity - takes into account the GHG emissions associated with all of the steps of producing, transporting, and consuming a fuel.</li>
+  <li>Partial Lifecycle Carbon Intensity -- takes into account the GHG emissions associated with all of the steps of producing a fuel up to the Injection Point or interconnection into the distribution system or interstate transportation system.</li>
+  </ol>
 
 Lifecycle CI scores for RNG require an assessment of all sources and sinks of GHGs---from production to end-use---and dividing these emissions by the energy in the gas at a specific point in that lifecycle. The resulting value is measured on a carbon dioxide equivalency basis. This is important because Methane is a short-lived climate pollutant that, according to the Intergovernmental Panel on Climate Change, is up to 84 times as potent a GHG as carbon dioxide.[[3]](#_ftn3)
 
@@ -603,7 +603,7 @@ Certificate Retirement is an action taken by the User to remove a Certificate fr
 
 <ul>
   <li>Formal Definition: With respect to any Certificate, Beneficial Ownership Rights means any contractual or other right to direct or control the sale or other disposition of, or the Retirement of, such Certificate or (ii) any contractual or other right to receive the benefits of such Certificate or any proceeds from the sale or other disposition of such Certificate.</li>
-  <li>M-RETS Uses: All retirements for the benefit of an individual owner for a general environmental reason (i.e. company purchasing RTCs to green their thermal operations). Within this Retirement type there are additional options in the "Reason" drop down box. One of the reasons is utility retirement on behalf of all customers. This Reason should be selected when a utility is looking to make a voluntary retirement that can be applied to all customers.<li>
+  <li>M-RETS Uses: All retirements for the benefit of an individual owner for a general environmental reason (i.e. company purchasing RTCs to green their thermal operations). Within this Retirement type there are additional options in the "Reason" drop down box. One of the reasons is utility retirement on behalf of all customers. This Reason should be selected when a utility is looking to make a voluntary retirement that can be applied to all customers.</li>
   <li>An Additional Details field is provided to allow the User to provide specific information about the sale (i.e. customer name, retirement year) Note: Compliance or Green-e Voluntary programs should not use the Beneficial Ownership retirement type. All state compliance retirements should use the Compliance Retirement Type. Green-e Voluntary Retirements should use the Green-e Thermal Certified Voluntary Market Sale Retirement Type.</li>
   </ul>
 
@@ -753,11 +753,11 @@ Documentation for the API is accessed through the M-RETS portal. Click on the "D
 
 More information on our API can be found in our [Terms of Use](https://www.mrets.org/wp-content/uploads/2020/10/MRETS-Terms-of-Use-RNG-AND-REC-Effective-January-1-2020.pdf).
 
-# Section 6: Public Reports
+# Section 5: Public Reports
 
 M-RETS provides live-updated Public Reports on the M-RETS [Landing Page](https://app.mrets.org/reports/public) subject to the privacy rules contained in the M-RETS Terms of Use.
 
-# Section 7: Acknowledgements
+# Section 6: Acknowledgements
 
 At the time of publication, the M-RETS Board of Directors included:
 
@@ -778,7 +778,6 @@ At the time of publication, the M-RETS Board of Directors included:
 **Tyler Meulemans**, Public Service Commission of Wisconsin
 
 # Appendix A: Resource Type & Feedstock Source
-
 
 **Resource Type**
 
@@ -801,7 +800,7 @@ At the time of publication, the M-RETS Board of Directors included:
 |WHR|Waste Heat Recovery|Y|N|
 |WO1|Waste Oil|N|N|
 
-**Fuel Source:**
+**Feedstock:**
 
 |**Resource Type**|**Feedstock**|
 |-----------------|-------------|
@@ -854,7 +853,7 @@ At the time of publication, the M-RETS Board of Directors included:
 |Wind|Wind|
 |Waste Oil|Waste Oil|
 
-# Appendix D: Glossary
+# Appendix B: Glossary
 
 **Account**: M-RETS provides several different Accounts for holding and retiring M-RETS Certificates
 
