@@ -14,7 +14,7 @@ To register the Generating Unit(s), the owner of the Generating Unit or the Resp
 
 <ol>
   <li>A completed online Generator registration form containing information related to the characteristics of the Generating Unit and associated meter.</li>
-  <li>If applicable: A completed [Schedule A from the M-RETS Terms of Use outlining the Generator Owner's Designation of Responsible Party](https://www.mrets.org/wp-content/uploads/2017/12/MRETS-Schedule-A-Modified-12-28-2017.pdf).</li>
+  <li>If applicable: A completed <a href="https://www.mrets.org/wp-content/uploads/2017/12/MRETS-Schedule-A-Modified-12-28-2017.pdf">Schedule A from the M-RETS Terms of Use outlining the Generator Owner's Designation of Responsible Party</a></li>
   <li>Any documentation requested by M-RETS to verify the registration information
     <ol>
       <li>It is helpful for generators to include a generator interconnection agreement if the generator is connected to a natural gas pipeline or a natural gas distribution network.</li>
