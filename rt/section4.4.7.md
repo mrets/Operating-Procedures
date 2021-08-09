@@ -1,6 +1,6 @@
 ### Section 4.4.7: Carbon Pathways
 
-M-RETS supports tracking one or more Carbon Pathways that provide a Carbon Intensity ("CI") tracking. While tracking CI **is not** mandatory, M-RETS encourages generators to submit and track a CI whenever practicable. CI values are expressed in grams of carbon dioxide equivalent per megajoule of energy (*gCO~2~e/MJ*) as well as (*gCO~2~e/Dth*). M-RETS supports either a Full Lifecycle CI or a Partial Lifecycle CI.
+M-RETS supports tracking one or more Carbon Pathways that provide a Carbon Intensity ("CI") tracking. While tracking CI **is not** mandatory, M-RETS encourages generators to submit and track a CI whenever practicable. CI values are expressed in grams of carbon dioxide equivalent per megajoule of energy (*gCO2e/MJ*) as well as (*gCO2e/Dth*). M-RETS supports either a Full Lifecycle CI or a Partial Lifecycle CI.
 
 <ol>
   <li>Full Lifecycle Carbon Intensity - takes into account the GHG emissions associated with all of the steps of producing, transporting, and consuming a fuel.</li>
@@ -20,5 +20,7 @@ The alternative to using lifecycle accounting is to use source-based accounting 
 M-RETS does not require Generator Owners to update the Carbon Pathways at specific intervals. Instead, each Carbon Pathway has a date range. The first date in the range represents the verification date by an independent third party. The last date in the range represents the last day that certificates can be issued with that Carbon Pathway. Certificates issued following the last day of the date range will no longer maintain the Carbon Pathway. Should a state or provincial regulatory scheme require annual updates, the eligibility flag will be removed if valid Carbon Pathways are not maintained by the generator and/or the specific Thermal Resource and Feedstock. For a generator to maintain the IRE eligibility the Generator must at a minimum update each Carbon Pathway associated with a generator annually.
 
 * * * * *
+
+[[3]](#_ftnref3) *See *<https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter08_FINAL.pdf>.
 
 [[4]](#_ftnref4) *See *ICF, December 2019, *Renewable Sources of Natural Gas: Supply and Emissions Reduction Assessment*, prepared for the American Gas Foundation (pg. 44-47, Appendix B) https://www.gasfoundation.org/wp-content/uploads/2019/12/AGF- 2019-RNG-Study-Full-Report-FINAL-12-18-19.pdf (describing how these approaches related to RNG).
