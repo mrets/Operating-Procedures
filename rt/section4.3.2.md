@@ -1,0 +1,7 @@
+### Section 4.3.2: Verification of Static Data Submitted During Generator Registration
+
+Upon completion of the Generator registration process, the User represents and warrants to M-RETS that all information for this Generator shall be true, complete, and correct to the best of its knowledge, information, and belief. Any changes after submission may result in a delay in the approval process. The Generator approval process begins once the Generator is submitted from a draft status.
+
+In the event data submitted is inaccurate or if there is a discrepancy between the information submitted during the online registration process and the materials provided to verify the information, M-RETS will notify the registrant of the issue. A process of either correcting the data in the online registration form, withdrawing the registration, or providing proof that the information on the registration form is correct will ensue between M-RETS and the registrant until M-RETS is satisfied that the information provided meets M-RETS approval standards.
+
+M-RETS may waive the one-time generator registration fee of $1,500 if the generator commits to using an IRE for the first full year of generation information. Furthermore, the registrant must submit a signed legal attestation by the IRE that the IRE reviewed the information contained in registration and that it is true and correct to the best of the IRE's knowledge.
