@@ -40,7 +40,7 @@ Retirements are effective immediately upon completion of the transaction. Once a
 
 ### Section 4.2.6: Deposits to the Retirement Account
 
-*See* Section 4.5.3: Certificate Retirement
+[*See Section 4.5.3: Certificate Retirement*](https://mrets.github.io/Operating-Procedures/blob/master/rt/section4.5.3)
 
 ### Section 4.2.7: Functionality of the Retirement Account
 
