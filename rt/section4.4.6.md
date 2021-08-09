@@ -1,0 +1,5 @@
+### Section 4.4.6: The Addition of Non-Renewable Fuels -- Non-Qualified Generation
+
+M-RETS recognized that in some cases non-renewable fuels or gas may be blended with renewable fuels or gas (e.g., to achieve a specific heating value and/or meet other pipeline specifications). M-RETS will not create certificates for any Dth values that are added, regardless of the reason. Therefore, M-RETS considers Non-Renewable Fuels added to RNG Non-Qualified Generation. The non-renewable fuels will not receive certificates, however, M-RETS will include them as a non-renewable fuel in the Generation Entry. This will ensure there is a record and that the injection documentation matches the generation values.
+
+Self-Reporting Entities and IRE's must document to M-RETS through the generation upload process the Dth value of the non-renewable fuels or gas blended with the renewable fuels that qualify for M-RETS. The value may be reported as a specific Dth value or as an overall percentage. Prior to submitting generation data, IRE's and Self-Reporting generators certify that they have acknowledged any non-renewable fuels or gas that were blended.
