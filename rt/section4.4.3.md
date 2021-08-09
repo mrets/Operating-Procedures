@@ -1,0 +1,3 @@
+### Section 4.4.3: Initial Reporting and Reporting Historic Generation Upon Generator Approval
+
+Upon registration and subsequent approval, Generators have 90-days from the Generator Approval date to upload historic generation into the M-RETS System. M-RETS will allow generation within the first 90 days of a generator's approval up to 11 years from the year of registration. If a generator registers in January 2020, M-RETS will accept generation submitted within 90 days of approval going back to the year 2009. Any generation uploaded past the 90^th^ day from registration or more than 11 years back requires a Variance Request and if there is a program eligibility may require sign-off from the appropriate regulator. 
