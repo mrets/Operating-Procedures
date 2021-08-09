@@ -1,0 +1,5 @@
+### Section 4.4.5: Requirements of Independent Reporting Entity (IRE) and Self-Reporting Generators
+
+M-RETS will accept generation data from either an IRE or a Self-Reporting Generator. M-RETS will maintain a list in each IRE's Organization of the Generating Units for which the IRE is reporting. M-RETS will outline the protocols for the collection of information such as data format, communication protocols and timing, and security requirements for data collection. M-RETS will update this document when any changes are made that may impact the data collection process. To minimize the impact of document changes, this document is a general template that outlines a common approach and set of standards.
+
+The Reporting Entity Terms of Use contain the specific data collection parameters for each reporting entity. M-RETS will work with the personnel from the IREs to verify the information and address specific requirements of each reporting entity. M-RETS reserves the right to audit the Dth data totals submitted at any time.
