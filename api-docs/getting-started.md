@@ -13,9 +13,9 @@ The M-RETS API provides nearly all of the functionality available through the pl
 * Retrieving your full inventory of active and retired RECs
 * Creating and updating generators
 * Submitting generation data and issuing RECs
-* Completing and internal, external, export transaction
+* Completing an internal, external, export transaction
 * Retiring certificates for voluntary or compliance purposes
-* Participaing in a program
+* Participating in a program
 
 ## What is required to use the M-RETS API?
 
@@ -23,7 +23,7 @@ M-RETs requires that all API users be part of a registered organization with a G
 
 ## How to get started
 
-To gain access to our API, we reccomend the following steps:
+To gain access to our API, we recommend the following steps:
 
 1. Request access to the M-RETS sandbox by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSebmAyf6cNc1GAcYASXcbU3vwHwHGG-jUNReQQdc0ii-k_Pwg/viewform).
 2. We will create test organizations for your team to use and send you the credentials. You are free to generate new API keys and user’s access tokens.
