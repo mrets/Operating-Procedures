@@ -1,10 +1,11 @@
 # Versioning
 
-The M-RETS API will be managed using standard semantic versioning. When possible, we have tried to follow (this spec)[https://semver.org/].
+The M-RETS API will be managed using standard semantic versioning. When possible, we have tried to follow <a href="https://semver.org" target="_blank">this spec</a>.
 
 The major version number will be embedded in the URL and the full version can be found in the header. M-RETS will only support one minor/patch version at any time. At the point we introduce a new major version, we commit to communicating well in advance of the changes and will continue to support an old major version for a set period of time also communicated well in advance to all API users.
 
-All API minor and major changes will be posted in our API docs as well as sent out to our API email list. To join our list, sign-up here. 
+All API minor and major changes will be posted in our API docs as well as sent out to our API email list. To join our list,  
+<a href="https://www.mrets.org/api" target="_blank">sign-up here</a>.
 
 ## Breaking Changes
 
@@ -19,6 +20,6 @@ The M-RETS is a rapidly changing platform. In our design of the public facing AP
 | Adding additional validations to existing fields              | Will evaluate on a case-by-case basis |
 | Bug fixes                                                     | Patch Version Change                  |
 
-Minor changes will deployed to our sandbox environment along with updated documentation 2 weeks in advance of the changes being pushed to prod. An email notification will go out information users exactly what will change as well as the anticipated release date. The intention is that these changes should not be backwards incompatible, but we want to give our users an opportunity to test their integrations before they go live.
+Minor changes will deployed to our sandbox environment along with updated documentation 2 weeks in advance of the changes being pushed to prod. An email notification will go out informing users exactly what will change as well as the anticipated release date. The intention is that these changes should not be backwards incompatible, but we want to give our users an opportunity to test their integrations before they go live.
 
-Major changes will (hopefully) occure on a very infrequent basis. It is our intention to communicate clearly about the release of a new major version 2-3 months in advance of the major version going live. It is our intention to continue supporting a legacy major version for a minimum of 6 months after a new major version is available. 
+Major changes will (hopefully) occur on a very infrequent basis. It is our intention to communicate clearly about the release of a new major version 2-3 months in advance of the major version going live. It is our intention to continue supporting a legacy major version for a minimum of 6 months after a new major version is available. 
