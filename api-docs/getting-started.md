@@ -41,7 +41,7 @@ Swagger Docs are available for all M-RETS API endpoints.
 
 Select Postman files can be downloaded for many API endpoints.
 
-To use these Postman collections, the `API_TOKEN` enviroment variable should be set to your sandbox api token.
+To use these Postman collections, the `API_TOKEN` environment variable should be set to your sandbox api token.
 
 * [Accounts](https://m-rets-sandbox.herokuapp.com/postman-collections/Accounts.postman_collection.json)
 * [Certificate Quantities](https://m-rets-sandbox.herokuapp.com/postman-collections/Certificate-Quantities.postman_collection.json)

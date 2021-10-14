@@ -23,4 +23,4 @@
 ## Markets
 
 * <a href="https://mrets.github.io/Operating-Procedures/api-docs/scenarios/administer-a-market" target="_blank">Administer a Market</a>
-* <a href="https://mrets.github.io/Operating-Procedures/api-docs/scenarios/participate-in-a-market" target="_blank">Particiapte in a Market</a>
+* <a href="https://mrets.github.io/Operating-Procedures/api-docs/scenarios/participate-in-a-market" target="_blank">Participate in a Market</a>

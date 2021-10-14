@@ -35,7 +35,7 @@ The relationships available with this call include:
 * To Account
 * User Transaction
 
-To receive the additional associated information that can be viewed in the Transaction History table found in the M-RETS, it would be helpful to include all of these optins.
+To receive the additional associated information that can be viewed in the Transaction History table found in the M-RETS, it would be helpful to include all of these options.
 
 ```
 v1/public/transaction_details?include=to_account,certificate,from_account.organization,user_transaction
@@ -76,6 +76,6 @@ v1/public/transaction_details?filter[generator]=00000000-0000-0000-0000-00000000
 
 ## Notes on Pagination / Limits / Permissions
 
-The M-RETS API by default returns paginated results of 25 records. With a maximun of 100 records.
+The M-RETS API by default returns paginated results of 25 records. With a maximum of 100 records.
 
 For external transactions, the API will not return the `to_account` field for another organization. This is information M-RETS does not expose.
