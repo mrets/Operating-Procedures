@@ -208,7 +208,7 @@ All transactions are initiated in the same way.
 
 ### Specifying the Transaction Type
 
-For an market transfer, the transaction type should be `market transfer`.
+For a market transfer, the transaction type should be `market transfer`.
 
 ```json
   "transaction_type": "market transfer"
@@ -274,7 +274,7 @@ Transaction Details can be created into that draft User Transaction.
 
 ### Selecting Certificates
 
-One or many Certificate are specified. To view what the possible options are, the full list of Certificates with Active Certificate Quantities can be retrieved with this call:
+One or many Certificates are specified. To view what the possible options are, the full list of Certificates with Active Certificate Quantities can be retrieved with this call:
 
     GET /v1/public/certificate_quantities?filter[status]=active&include=certificate
 
@@ -316,7 +316,7 @@ The available certificates come from the "For Sale" accounts of a participant or
 }
 ```
 
-Then select an Certificate and include it in a post call like this:
+Then select a Certificate and include it in a post call like this:
 
 ```json
 "certificate": {

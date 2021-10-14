@@ -2,13 +2,13 @@
 
 ## Use Case
 
-Any registered generator is eligible to issue certificates. Generation is usually submit monthly for large generators and can be submit annually for generators under 150kW.
+Any registered generator is eligible to issue certificates. Generation is usually submitted monthly for large generators and can be submitted annually for generators under 150kW.
 
 M-RETS issues 1 Renewable Energy Cerificate for each MWh submit. 
 
 ## Notes About the Entity
 
-Submittal of generation occures through the creation of a generation entry. The system runs a series of validation generation entries and automatically issues certifiates if all validations pass successfully.
+Submittal of generation occurs through the creation of a generation entry. The system runs a series of validation generation entries and automatically issues certifiates if all validations pass successfully.
 
 ## The Basic Call
 
@@ -57,9 +57,9 @@ Here is an example with multiple multiple `fuel_types`:
 
 Some of the validations in place include:
 
-* Generation more than 62 days old must be approved by the System Admin
+* Generation more than 62 days old must be approved by the System Admin.
 * There can't be any temporal gaps in the submittal of generation.
-* Generation can't exceed the theoretical limits of a generator based on the nameplate capacity and capapcity factor.
+* Generation can't exceed the theoretical limits of a generator based on the nameplate capacity and capacity factor.
 
 Here is an example response if there's a gap in the submittal process.
 
