@@ -48,6 +48,7 @@
 | Nuclear | Nuclear |
 | Tidal or Wave | Tidal or Wave |
 | Oil | Oil |
+|Pumped Hydro Storage|Grid Electricity|
 | Solar | Solar PV |
 | Solar | Solar Thermal |
 | WHR | Waste Heat Recovery/Recycled Energy |
