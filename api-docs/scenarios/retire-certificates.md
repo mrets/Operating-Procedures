@@ -19,7 +19,7 @@ A Retirement Transaction only involve one step. A user initiates a retirement an
 
 All transactions are initiated in the same way. One or many Certificate Quantities are specified.
 
-    POST /v1/public/user_transactions
+    POST /v1/public/rec/user_transactions
 ##### Example
 ```json
 {
@@ -57,7 +57,7 @@ For an retirement, the transaction type should be `retirement`.
 
 The destination on an retirement should be a Retirement Account within the same organization. To view what the possible options are, the full list of Retirement Accounts can be retrieved with this call:
 
-    POST /v1/public/accounts?filter[account_type]=retirement&filter[status]=open
+    POST /v1/public/rec/accounts?filter[account_type]=retirement&filter[status]=open
 
 ##### Response
     Status: 200 OK
@@ -97,7 +97,7 @@ Then select a Retirement Account and include it in a post call like this:
 
 To view valid retirement options, this call can be used:
 
-    GET /v1/public/retirement_options
+    GET /v1/public/rec/retirement_options
 ##### Response
     Status: 200 OK
 ```json

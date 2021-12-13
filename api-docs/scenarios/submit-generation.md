@@ -15,7 +15,7 @@ Submittal of generation occurs through the creation of a generation entry. The s
 To create a generation entry:
 
 ```
-POST v1/public/generation-entries/create
+POST v1/public/rec/generation-entries/create
 ```
 
 Here is an example with multiple multiple `fuel_types`:

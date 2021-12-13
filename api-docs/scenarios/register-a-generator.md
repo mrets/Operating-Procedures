@@ -17,7 +17,7 @@ To initialize a generator in `draft` status, the only required field is the gene
 Upon being initialized, the system will asign a sequential `mrets_id` to the generator. 
 
 ```
-POST v1/public/generators
+POST v1/public/rec/generators
 
 {
   "data": {
@@ -94,13 +94,13 @@ Generators are associated with a specific `fuel_source` through a `generator_fue
 To get the list of possible `fuel_sources`:
 
 ``` 
-GET v1/public/fuel_sources
+GET v1/public/rec/fuel_sources
 ```
 
 To add the generator_fuel `biomass` to a generator, the call would look like this: 
 
 ```
-POST v1/public/generator_fuels
+POST v1/public/rec/generator_fuels
 
 {
   "data": {
@@ -120,9 +120,9 @@ POST v1/public/generator_fuels
 A generator has 3 associated contact objects including the Owner, Operator, and Mailing Address. To create these objects the call would look like this:
 
 ```
-POST /v1/public/generators/:generator_id/owner
-POST /v1/public/generators/:generator_id/operator
-POST /v1/public/generators/:generator_id/mailing
+POST /v1/public/rec/generators/:generator_id/owner
+POST /v1/public/rec/generators/:generator_id/operator
+POST /v1/public/rec/generators/:generator_id/mailing
 ```
 
 Payload Sample:
@@ -154,13 +154,13 @@ A generator can have one or many associated `eligibilities`.
 The full list of possible eligibilities can be retrieved with this call:
 
 ```
-v1/public/eligibilities
+v1/public/rec/eligibilities
 ```
 
 To add the `MN` and `ND` eligibilities to a generator:
  
  ```
-POST /v1/public/generator_fuels/2dc6c99e-30fe-420e-ad3d-03a8b94c40eb/relationships/eligibilities
+POST /v1/public/rec/generator_fuels/2dc6c99e-30fe-420e-ad3d-03a8b94c40eb/relationships/eligibilities
 
 {
   "data": [{ "type": "eligibilities", id: {eligib_id} }]
@@ -173,7 +173,7 @@ A generator has one reporting entity. This can either be `Self Reporting` or ano
 To designate a generators self-reporting:
 
 ```
-GET /v1/public/generators/00080670-ce1c-4e2d-8a1b-0b97fd4d716f/relationships/reporting_entity
+GET /v1/public/rec/generators/00080670-ce1c-4e2d-8a1b-0b97fd4d716f/relationships/reporting_entity
 
 {
   "data": [{ "type": "organizations", id: {owner_org_id} }]
@@ -182,7 +182,7 @@ GET /v1/public/generators/00080670-ce1c-4e2d-8a1b-0b97fd4d716f/relationships/rep
 
 To designate another organization as the reporting entity:
 ```
-PUT /v1/public/generators/00080670-ce1c-4e2d-8a1b-0b97fd4d716f/relationships/reporting_entity
+PUT /v1/public/rec/generators/00080670-ce1c-4e2d-8a1b-0b97fd4d716f/relationships/reporting_entity
 
 {
   "data": [{ "type": "organizations", id: {org_id} }]
@@ -194,7 +194,7 @@ PUT /v1/public/generators/00080670-ce1c-4e2d-8a1b-0b97fd4d716f/relationships/rep
 As mentioned above, a generator only requires the `name` to be saved in `draft` status. Before a generator can be submit to be reviewed by the M-RETS System Admin, it must have include all required fields (see swagger file for further details on which fiels are requred). To submit a generator for review, change the status to `pending`.
 
 ```
-PUT v1/public/generators/{org_id}
+PUT v1/public/rec/generators/{org_id}
 
 {
   "data": {

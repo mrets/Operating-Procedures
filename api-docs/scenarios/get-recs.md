@@ -13,7 +13,7 @@ For example, say we have a Certificate Quantity representing 100 certificates an
 ## The Basic Call
 
 ```
-v1/public/certificate_quantities
+v1/public/rec/certificate_quantities
 ```
 
 ## Filters
@@ -21,7 +21,7 @@ v1/public/certificate_quantities
 The most common filters that would be applied to certificate quantities would likely be the `status` filter. To replicate the table found in the M-RETS under the Active Certificate tab, you would apply the `active` filter.
 
 ```
-v1/public/certificate_quantities?filter[status]=active
+v1/public/rec/certificate_quantities?filter[status]=active
 ```
 
 ## Including Relationships
@@ -35,7 +35,7 @@ The relationships available with this call include:
 To receive the additional associated information that can be viewed in the Active Certificates table found in the M-RETS under the Active Certificate tab, it would be helpful to include the Account and the Certificate.
 
 ```
-v1/public/certificate_quantities?include=account,certificate,transaction_detail
+v1/public/rec/certificate_quantities?include=account,certificate,transaction_detail
 ```
 
 ## Sorting Results
@@ -43,7 +43,7 @@ v1/public/certificate_quantities?include=account,certificate,transaction_detail
 And let's say we want to view these certificates in order by when they were created.
 
 ```
-v1/public/certificate_quantities?sort=created_at
+v1/public/rec/certificate_quantities?sort=created_at
 ```
 
 ## Other Use Case Examples
@@ -53,37 +53,37 @@ Other things you may want to do with this endpoint could include:
 View all of your retired RECs:
 
 ```
-v1/public/certificate_quantities?filter[status]=retired
+v1/public/rec/certificate_quantities?filter[status]=retired
 ```
 
 View all of your active RECs from a specific vintage, say Jan-Dec of 2019.
 
 ```
-v1/public/certificate_quantities?filter[status]=active&filter[vintage_start]=2019-01&filter[vintage_end]=2019-12
+v1/public/rec/certificate_quantities?filter[status]=active&filter[vintage_start]=2019-01&filter[vintage_end]=2019-12
 ```
 
 View all of your retired RECs retired for the MN RPS in 2018.
 
 ```
-v1/public/certificate_quantities?filter[status]=retired&filter[retirement_type]=State/Provincial Portfolio Standard&filter[retired_to]=MN&filter[retirement_period_start]=2018-01-01&filter[retirement_period_end]=2018-12-31
+v1/public/rec/certificate_quantities?filter[status]=retired&filter[retirement_type]=State/Provincial Portfolio Standard&filter[retired_to]=MN&filter[retirement_period_start]=2018-01-01&filter[retirement_period_end]=2018-12-31
 ```
 
 View all of your Active RECs in a specific Account id "00000000-0000-0000-0000-000000000001".
 
 ```
-v1/public/certificate_quantities?filter[status]=active&filter[account_id]=00000000-0000-0000-0000-000000000001
+v1/public/rec/certificate_quantities?filter[status]=active&filter[account_id]=00000000-0000-0000-0000-000000000001
 ```
 
 View all of your Active RECs with a specific Fuel Type id "00000000-0000-0000-0000-000000000001".
 
 ```
-v1/public/certificate_quantities?filter[status]=active&filter[fuel_type]=00000000-0000-0000-0000-000000000001
+v1/public/rec/certificate_quantities?filter[status]=active&filter[fuel_type]=00000000-0000-0000-0000-000000000001
 ```
 
 View all of your Active RECs with a specific Eligibility with slug "hydro".
 
 ```
-v1/public/certificate_quantities?filter[status]=active&filter[eligibility]=hydro
+v1/public/rec/certificate_quantities?filter[status]=active&filter[eligibility]=hydro
 ```
 
 ## Notes on Pagination / Limits / Permissions

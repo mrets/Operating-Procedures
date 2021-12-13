@@ -11,7 +11,7 @@ There are three main types of certificate transfers:
 
 Transfers in the M-RETS system are represented on a basic level by User Transactions and Transaction Details. The User Transaction captures important information about the transfer such as the transaction type, date the transaction was started/completed, and who started/completed the transaction.
 
-A transfer User Transaction could have one or many associated transaction details that represent the individual certificate quantities that were involved in the transaction. So say in the UI, a user were to select 3 rows and complete an Internal Transfer, that User Transaction would have three associated Transaction Details.
+A transfer User Transaction could have one or many associated transaction details that represent the individual certificate quantities that were involved in the transaction. For example if, in the UI, a user were to select 3 rows and complete an Internal Transfer, that User Transaction would have three associated Transaction Details.
 
 Internal transfers only involve one step. A user initiates a transfer and it will immediately be completed requiring no additional steps.
 
@@ -24,7 +24,7 @@ An external transfer has two steps. The transfer is initated, then it must be ac
 
 All transactions are initiated in the same way.
 
-    POST v1/public/user_transactions
+    POST v1/public/rec/user_transactions
 
 ##### Example
 ```json
@@ -76,7 +76,7 @@ For an internal transfer, the transaction type should be `internal transfer`.
 
 Transaction Details can be created into that draft User Transaction.
 
-    POST v1/public/transaction_details
+    POST v1/public/rec/transaction_details
 
 ##### Example
 ```json
@@ -140,7 +140,7 @@ Transaction Details can be created into that draft User Transaction.
 
 One or many Certificate are specified. To view what the possible options are, the full list of Certificates with Active Certificate Quantities can be retrieved with this call:
 
-    GET /v1/public/certificate_quantities?filter[status]=active&include=certificate
+    GET /v1/public/rec/certificate_quantities?filter[status]=active&include=certificate
 
 ##### Response
     Status: 200 OK
@@ -193,7 +193,7 @@ Then select an Certificate and include it in a post call like this:
 
 The destination on an internal transfer should one or many Active Accounts within the same organization. To view what the possible options are, the full list of Open Active Accounts can be retrieved with this call:
 
-    GET /v1/public/accounts?filter[account_type]=active&filter[status]=open
+    GET /v1/public/rec/accounts?filter[account_type]=active&filter[status]=open
 
 ##### Response
     Status: 200 OK
@@ -245,7 +245,7 @@ For an external transfer, the transaction type should be `external transfer`.
 
 Transaction Details can be created into that draft User Transaction.
 
-    POST v1/public/transaction_details
+    POST v1/public/rec/transaction_details
 
 ##### Example
 ```json
@@ -309,7 +309,7 @@ Transaction Details can be created into that draft User Transaction.
 
 The destination for an external transfer should be another Active Organization within the M-RETS System. To view what the possible options are, the full list of Organizations can be retrieved with this call:
 
-    GET /v1/public/organizations
+    GET /v1/public/rec/organizations
 ##### Response
     Status: 200 OK
 ```json
@@ -354,7 +354,7 @@ Email notification settings can be viewed and updated in the M-RETS user interfa
 
 Once the draft transaction is completed it needs to be enqueued with this call:
 
-    PUT /v1/public/user_transactions/<transaction uuid>/enqueue
+    PUT /v1/public/rec/user_transactions/<transaction uuid>/enqueue
 ##### Response
     Status: 200 OK
 
@@ -362,7 +362,7 @@ Once the draft transaction is completed it needs to be enqueued with this call:
 
 To view any pending transfers that need action, the call would look like this:
 
-    GET /v1/public/user_transactions?filter[status]=pending
+    GET /v1/public/rec/user_transactions?filter[status]=pending
 ##### Response
     Status: 200 OK
 
@@ -373,18 +373,18 @@ Once identifying a transaction that requires action, below are the possible ways
 
 ### Accepting an External Transfer
 
-    PUT /v1/public/user_transactions/<transaction uuid>/accept
+    PUT /v1/public/rec/user_transactions/<transaction uuid>/accept
 ##### Response
     Status: 200 OK
 
 ### Withdrawing an External Transfer
 
-    PUT /v1/public/user_transactions/<transaction uuid>/withdraw
+    PUT /v1/public/rec/user_transactions/<transaction uuid>/withdraw
 ##### Response
     Status: 200 OK
 
 ### Rejecting an External Transfer
 
-    PUT /v1/public/user_transactions/<transaction uuid>/reject
+    PUT /v1/public/rec/user_transactions/<transaction uuid>/reject
 ##### Response
     Status: 200 OK
