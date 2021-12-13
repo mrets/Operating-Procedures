@@ -88,34 +88,6 @@ The response will be
 
 ## Creating Associated Objects
 
-### Fuel Sources
-Generators are associated with a specific `fuel_source` through a `generator_fuel`. 
-
-To get the list of possible `fuel_sources`:
-
-``` 
-GET v1/public/rec/fuel_sources
-```
-
-To add the generator_fuel `biomass` to a generator, the call would look like this: 
-
-```
-POST v1/public/rec/generator_fuels
-
-{
-  "data": {
-    "type": "generator_fuels",
-    "attributes": {
-      "label": "Test 1"
-    },
-    "relationships": {
-      "fuel_source": { "data": { "type": "fuel_sources", "id": "00000000-0000-0000-0000-000000000001"  } },
-      "generator": { "data": { "type": "generators", "id": "15500fff-8b41-478b-acaf-f4e9a3993b80" } }
-    }
-  }
-}
-```
-
 ### Contacts
 A generator has 3 associated contact objects including the Owner, Operator, and Mailing Address. To create these objects the call would look like this:
 
@@ -143,6 +115,34 @@ Payload Sample:
       "fax": "000-111-1234",
       "email": "example.email@domain.com",
       "job_title": "Job Title"
+    }
+  }
+}
+```
+
+### Fuel Sources
+Generators are associated with a specific `fuel_source` through a `generator_fuel`. 
+
+To get the list of possible `fuel_sources`:
+
+``` 
+GET v1/public/rec/fuel_sources
+```
+
+To add the generator_fuel `biomass` to a generator, the call would look like this: 
+
+```
+POST v1/public/rec/generator_fuels
+
+{
+  "data": {
+    "type": "generator_fuels",
+    "attributes": {
+      "label": "Test 1"
+    },
+    "relationships": {
+      "fuel_source": { "data": { "type": "fuel_sources", "id": "00000000-0000-0000-0000-000000000001"  } },
+      "generator": { "data": { "type": "generators", "id": "15500fff-8b41-478b-acaf-f4e9a3993b80" } }
     }
   }
 }

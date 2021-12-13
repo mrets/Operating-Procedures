@@ -4,10 +4,6 @@
 
 The Generation History table in the M-RETS is a log of all generation entries in reverse chronological order. This information is helpful in understanding how much energy a generator produced and the resulting issuances that occured.
 
-## Notes About the Entity
-
-
-
 ## The Basic Call
 
 ```

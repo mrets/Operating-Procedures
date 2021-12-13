@@ -6,14 +6,14 @@ Certificates are retired when the owner wants to make some kid of environmental 
 
 ## Notes About the Entity
 
-Retirements in the M-RETS system are represented on a basic level by User Transactions and Transaction Details. The User Transaction captures important information about the retirement such as the transaction type, date the transaction was started/completed, who started/completed the transaction, and important details related to the retirement.
+Retirements in the M-RETS system are represented on a basic level by User Transactions and Transaction Details. The User Transaction captures important information about the retirement such as the transaction type, the date the transaction was started/completed, who started/completed the transaction, and important details related to the retirement.
 
 A retirement User Transaction could have one or many associated transaction details that represent the individual certificate quantities that were involved in the retirement. So say in the UI, a user were to select 3 rows to be retired, that User Transaction would have three associated Transaction Details.
 
 A Retirement Transaction only involve one step. A user initiates a retirement and it will immediately be completed requiring no additional steps.
 
 
-## Initiating an Retirement
+## Initiating a Retirement
 
 ### Selecting Certificates
 
@@ -55,7 +55,7 @@ For an retirement, the transaction type should be `retirement`.
 
 ### Specifying the Retirement Account
 
-The destination on an retirement should be a Retirement Account within the same organization. To view what the possible options are, the full list of Retirement Accounts can be retrieved with this call:
+The destination on a retirement should be a Retirement Account within the same organization. To view what the possible options are, the full list of Retirement Accounts can be retrieved with this call:
 
     POST /v1/public/rec/accounts?filter[account_type]=retirement&filter[status]=open
 
@@ -137,6 +137,6 @@ Then select the required Retirement Option and include it in a post call like th
 On the User Transaction object, the value of `retirement_type` should match the `name` from the selected `retirement_option`.
 The `retirement_reason` values should match one of the values from the `reason` field on the selected `retirement_option` (if available)The `retired_to` from the user transaction requires a State/Province abbreviation from the specify country on the `retired_to` from the `retirement_option` (if the value is `all` then all Countries are allowed).
 
-The M-RETS platform also sends out email notifications to the both sending organization and destination organization.
+The M-RETS platform also sends out email notifications to both the sending organization and destination organization.
 
 Email notification settings can be viewed and updated in the M-RETS user interface by clicking on the Org in the upper right corner, then navigating to the User table.
