@@ -191,7 +191,7 @@ PUT /v1/public/generators/00080670-ce1c-4e2d-8a1b-0b97fd4d716f/relationships/rep
 
 ## Generator State
 
-As mentioned above, a generator only requires the `name` to be saved in `draft` status. Before a generator can be submit to be reviewed by the M-RETS System Admin, it must have include all required fields (see swagger file for further details on which fiels are requred). To submit a generator for review, change the status to `pending`.
+As mentioned above, a generator only requires the `name` to be saved in `draft` status. Before a generator can be submitted to be reviewed by the M-RETS System Admin, it must have include all required fields (see swagger file for further details on which fiels are requred). To submit a generator for review, change the status to `pending`.
 
 ```
 PUT v1/public/generators/{org_id}
@@ -205,6 +205,24 @@ PUT v1/public/generators/{org_id}
 	  }
   }
 }
+```
+
+## Ownership Types
+
+The possible Ownership Types for generators are as follows:
+
+```
+  ['Corporate Owner',
+   'Electric Service Provider',
+   'Federal Marketer/Power Administrator',
+   'Independent Power Producer',
+   'Investor-Owned Utility',
+   'Irrigation District',
+   'Municipal Utility',
+   'Privately Owned Distributed Generation',
+   'Rural Electric Cooperative',
+   'Tribal Organization',
+   'Other']
 ```
 
 After it has been successfully reviewed by the M-RETS System Admin, the generator will be updated with a status of `approved` as well as an `effective_date`.
