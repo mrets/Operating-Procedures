@@ -140,7 +140,7 @@ Transaction Details can be created into that draft User Transaction.
 
 One or many Certificate are specified. To view what the possible options are, the full list of Certificates with Active Certificate Quantities can be retrieved with this call:
 
-    GET /v1/public/certificate_quantities?filter[status]=active&include=certificate
+    GET /v1/public/certificate_quantities?filter[status]=active&include=certificate,account
 
 ##### Response
     Status: 200 OK
