@@ -27,7 +27,7 @@ Purchased RECs would be deposited into the designated Active RECs account of the
 
 ### Get all active Participants
 
-	GET /v1/public/organizations?filter[participates_in_market]=<market program uuid>
+	GET /v1/public/rec/organizations?filter[participates_in_market]=<market program uuid>
 
 ##### Response
 ```json
@@ -58,7 +58,7 @@ Purchased RECs would be deposited into the designated Active RECs account of the
 
 The general `GET RECs` call for a Market Admin will return all RECs in the M-RETS that are in any of the Market's Participants' Market Accounts.
 
-	GET v1/public/certificate_quantities
+	GET v1/public/rec/certificate_quantities
 
 ##### Response
 ```json
@@ -94,7 +94,7 @@ The general `GET RECs` call for a Market Admin will return all RECs in the M-RET
 
 To return only the Certificates from a specific Participant's dedicated Market Account:
 
-	GET v1/public/certificate_quantities?include=certificate&filter[organization]=<participant organization uuid>
+	GET v1/public/rec/certificate_quantities?include=certificate&filter[organization]=<participant organization uuid>
 
 ##### Response
 ```json
@@ -136,7 +136,7 @@ To return only the Certificates from a specific Participant's dedicated Market A
 
 By default, a certificate quantity when placed in a Market account will be have a status of `unencumbered`. When the Market Admin is ready to post a certificate quantity on an external system, the certificate quantity status should be updated to `encumbered`.
 
-    PUT v1/public/....
+    PUT v1/public/rec/....
     
 #### Example
 ```json
@@ -166,7 +166,7 @@ The market transfer will deposited the certificates on the receiving organizatio
 
 All transactions are initiated in the same way.
 
-    POST v1/public/user_transactions
+    POST v1/public/rec/user_transactions
 
 #### Example
 ```json
@@ -218,7 +218,7 @@ For a market transfer, the transaction type should be `market transfer`.
 
 Transaction Details can be created into that draft User Transaction.
 
-    POST v1/public/transaction_details
+    POST v1/public/rec/transaction_details
 
 #### Example
 ```json
@@ -276,7 +276,7 @@ Transaction Details can be created into that draft User Transaction.
 
 One or many Certificates are specified. To view what the possible options are, the full list of Certificates with Active Certificate Quantities can be retrieved with this call:
 
-    GET /v1/public/certificate_quantities?filter[status]=active&include=certificate
+    GET /v1/public/rec/certificate_quantities?filter[status]=active&include=certificate
 
 The available certificates come from the "For Sale" accounts of a participant organization.
 
@@ -331,11 +331,11 @@ Then select a Certificate and include it in a post call like this:
 
 The destination on an market transfer should one within the participant Organizations of the market. To view what the possible options are, the full list of participant Organizations can be retrieved with this call:
 
-    POST /v1/public/organizations?filter[participates_in_market]=<market program uuid>
+    POST /v1/public/rec/organizations?filter[participates_in_market]=<market program uuid>
 
 Find your Market's program uuid with this call:
 
-    GET /v1/public/programs?filter[is_market]=true
+    GET /v1/public/rec/programs?filter[is_market]=true
 
 ##### Response
     Status: 200 OK
@@ -381,6 +381,6 @@ Email notification settings can be viewed and updated in the M-RETS user interfa
 
 Once the draft transaction is completed it needs to be enqueued with this call:
 
-    PUT /v1/public/user_transactions/<transaction uuid>/enqueue
+    PUT /v1/public/rec/user_transactions/<transaction uuid>/enqueue
 ##### Response
     Status: 200 OK

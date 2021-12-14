@@ -19,7 +19,7 @@ From here, the Certificates will either be sold and automatically transferred to
 
 To view all available invites, the full list of ProgramParticipantInvites can be retrieved with this call:
 
-    GET /v1/public/program_participant_invites?filter[program_type]=market
+    GET /v1/public/rec/program_participant_invites?filter[program_type]=market
 
 ##### Response
     Status: 200 OK
@@ -46,7 +46,7 @@ To view all available invites, the full list of ProgramParticipantInvites can be
 
 To accept a market invite:
 
-    POST /v1/public/program_participant_invites/<program_participant_invites uuid>/accept
+    POST /v1/public/rec/program_participant_invites/<program_participant_invites uuid>/accept
 
 ##### Response
     Status: 200 OK
@@ -71,7 +71,7 @@ To accept a market invite:
 
 To reject a market invite:
 
-    POST /v1/public/program_participant_invites/<program_participant_invites uuid>/reject
+    POST /v1/public/rec/program_participant_invites/<program_participant_invites uuid>/reject
 
 ##### Response
     Status: 200 OK
@@ -104,7 +104,7 @@ To move certificates into the Market account and make them eligible to be posted
 
 The Market Account will contain the name of the spot Market.
 
-    GET /v1/public/accounts?filter[account_type]=market&filter[status]=open
+    GET /v1/public/rec/accounts?filter[account_type]=market&filter[status]=open
 
 ##### Response
     Status: 200 OK
@@ -146,7 +146,7 @@ One or many Certificate are specified. To view what the possible options are, th
 
 #### Example
 
-    GET /v1/public/certificate_quantities?filter[status]=active&include=certificate
+    GET /v1/public/rec/certificate_quantities?filter[status]=active&include=certificate
 
 ##### Response
     Status: 200 OK
@@ -200,7 +200,7 @@ Then select an Certificate and include it in a post call like this:
 
 Once the draft transaction is completed it needs to be enqueued with this call:
 
-    PUT /v1/public/user_transactions/<transaction uuid>/enqueue
+    PUT /v1/public/rec/user_transactions/<transaction uuid>/enqueue
 ##### Response
     Status: 200 OK
 
@@ -209,6 +209,6 @@ Once the draft transaction is completed it needs to be enqueued with this call:
 
 To leave a Market first make sure there are no recs on the To Sell account:
 
-    POST /v1/public/programs/<market program uuid>/leave
+    POST /v1/public/rec/programs/<market program uuid>/leave
 ##### Response
     Status: 200 OK
