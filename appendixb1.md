@@ -38,7 +38,7 @@
 | FC1 | Fuel Cells  | true | false |
 | BFG | Gas – Blast-Furnace Gas  | true | false |
 | GE1 | Geothermal Energy  | true | false |
-| GWS | Ground And Water Source Head Pump  | true | false |
+| GWS | Ground And Water Source Heat Pump  | true | false |
 | HY2 | Hydro (WI Eligible)  | true | false |
 | H2O | Hydroelectric Water  | true | false |
 | HYD | Hydrogen  | true | false |
