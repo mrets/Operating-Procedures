@@ -2,15 +2,15 @@
 
 ## Use Case
 
-Certificates are retired when the owner wants to make some kid of environmental claim. M-RETS supports a variety of Retirement Types and Reasons.
+Certificates are retired when the owner wants to make some kind of environmental claim. M-RETS supports a variety of Retirement Types and Reasons.
 
 ## Notes About the Entity
 
 Retirements in the M-RETS system are represented on a basic level by User Transactions and Transaction Details. The User Transaction captures important information about the retirement such as the transaction type, the date the transaction was started/completed, who started/completed the transaction, and important details related to the retirement.
 
-A retirement User Transaction could have one or many associated transaction details that represent the individual certificate quantities that were involved in the retirement. So say in the UI, a user were to select 3 rows to be retired, that User Transaction would have three associated Transaction Details.
+A retirement User Transaction could have one or many associated transaction details that represent the individual certificate quantities that were involved in the retirement. For example, if a user were to select 3 rows to be retired in the UI, that User Transaction would have three associated Transaction Details.
 
-A Retirement Transaction only involve one step. A user initiates a retirement and it will immediately be completed requiring no additional steps.
+A Retirement Transaction only involves one step. A user initiates a retirement and it will immediately be completed requiring no additional steps.
 
 
 ## Initiating a Retirement
@@ -47,7 +47,7 @@ All transactions are initiated in the same way. One or many Certificate Quantiti
 
 ### Specifying the Transaction Type
 
-For an retirement, the transaction type should be `retirement`.
+For a retirement, the transaction type should be `retirement`.
 
 ```json
   "transaction_type": "retirement"
