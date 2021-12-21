@@ -2,7 +2,7 @@
 
 ## Use Case
 
-Registering a generator in the M-RETS is the first step towards issuing certificates. It is a multi-step process and, once all data has been submit, requries approval by the M-RETS System Administrator.
+Registering a generator in the M-RETS is the first step towards issuing certificates. It is a multi-step process and, once all data has been submitted, requires approval by the M-RETS System Administrator.
 
 ## Notes About the Entity
 
@@ -14,7 +14,7 @@ Once a generator is `approved`, there is a subset of fields that if updated will
 
 To initialize a generator in `draft` status, the only required field is the generator `facility_name`.
 
-Upon being initialized, the system will asign a sequential `mrets_id` to the generator. 
+Upon being initialized, the system will assign a sequential `mrets_id` to the generator. 
 
 ```
 POST v1/public/rec/generators
