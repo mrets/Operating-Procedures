@@ -17,7 +17,7 @@ The Market Administrator establishes a new “Market”. The Market Administrato
 
 1. The Market Administrator has the ability to invite an unlimited number of participants to this Market. Currently this part of the process is completed through the M-RETS interface. The Market Admin can select who to send invites to from a list of organizations in the M-RETS. The invites trigger email notifications for both parties. Participants can accept the invitation by logging into the M-RETS and clicking "Accept" on the notification. The list of Participants who have accepted the invite is available via API to the Market Administrator.
 
-2. Upon accepting an invite to a Market, a special active Market Account would be automatically created for the Participant as well as a designated account where purchased RECs will be deposited. Participants can transfer Certificates to the designated Market Account. This is completed as a standard Internal Transafer. While in this account, the certificates are visible to the Market Administrator and become available to be posted to the external market platform. The Certificates by default have the status of “unencumbered”, but when the Market Administrator wants to post them on an external platform, they can update the status via API to “encumbered”. While posted on the external market, it is the Market Administrator’s responsibility to ensure Certificates have been set to “encumbered”. This ensures that they can’t be transacted on in the M-RETS system. Before a Market Participant can remove certificates from the Market Account they must be set to unencumbered. Only the Market Admin can return Certificates to and “unencumbered” status.
+2. Upon accepting an invite to a Market, a special active Market Account would be automatically created for the Participant as well as a designated account where purchased RECs will be deposited. Participants can transfer Certificates to the designated Market Account. This is completed as a standard Internal Transfer. While in this account, the certificates are visible to the Market Administrator and become available to be posted to the external market platform. The Certificates by default have the status of “unencumbered”, but when the Market Administrator wants to post them on an external platform, they can update the status via API to “encumbered”. While posted on the external market, it is the Market Administrator’s responsibility to ensure Certificates have been set to “encumbered”. This ensures that they can’t be transacted on in the M-RETS system. Before a Market Participant can remove certificates from the Market Account they must be set to unencumbered. Only the Market Admin can return Certificates to an “unencumbered” status.
 
 3. When a sale is completed in the external market, the Market Administrator has the ability to conduct a “Market Transaction” in the M-RETS via API. This includes creating a seamless transaction that sends Certificates from the Seller to the Market Admin, then from Market Admin to the buyer. Structuring the Market Transaction in this way gives the Market Administrator the ability to expose or not the identities of the buyer and seller in any transaction.
 
@@ -134,7 +134,7 @@ To return only the Certificates from a specific Participant's dedicated Market A
 
 ### Update Encumbered / Unencumbered Status of a Certificate Quantity
 
-By default, a certificate quantity when placed in a Market account will be have a status of `unencumbered`. When the Market Admin is ready to post a certificate quantity on an external system, the certificate quantity status should be updated to `encumbered`.
+By default, a certificate quantity when placed in a Market account will have a status of `unencumbered`. When the Market Admin is ready to post a certificate quantity on an external system, the certificate quantity status should be updated to `encumbered`.
 
     PUT v1/public/rec/....
     
@@ -156,11 +156,11 @@ By default, a certificate quantity when placed in a Market account will be have 
 
 Transfers in the M-RETS system are represented on a basic level by User Transactions and Transaction Details. The User Transaction captures important information about the transfer such as the transaction type, date the transaction was started/completed, and who started/completed the transaction. 
 
-A `transfer` User Transaction could have one or many associated transaction details that represent the individual certificate quantities that were involved in the transaction. So say in the UI, a user were to select 3 rows and complete an Market Transfer, that User Transaction would have three associated Transaction Details.
+A `transfer` User Transaction could have one or many associated transaction details that represent the individual certificate quantities that were involved in the transaction. For example, if a user were to select 3 rows and complete a Market Transfer in the UI, that User Transaction would have three associated Transaction Details.
 
 Market transfers only involve one step. A user initiates a transfer and it will immediately be completed requiring no additional steps.
 
-The market transfer will deposited the certificates on the receiving organization's Purchased account.
+The market transfer will deposit the certificates on the receiving organization's Purchased account.
 
 ### Drafting a transaction
 
@@ -329,7 +329,7 @@ Then select a Certificate and include it in a post call like this:
 
 ### Specifying the Receiving Party
 
-The destination on an market transfer should one within the participant Organizations of the market. To view what the possible options are, the full list of participant Organizations can be retrieved with this call:
+The destination on a market transfer should be one within the participant Organizations of the market. To view what the possible options are, the full list of participant Organizations can be retrieved with this call:
 
     POST /v1/public/rec/organizations?filter[participates_in_market]=<market program uuid>
 
@@ -373,7 +373,7 @@ Then select an Organization and include it in a post call like this:
 }
 ```
 
-The M-RETS platform also sends out email notifications to the both sending organization and receiving organization.
+The M-RETS platform also sends out email notifications to both sending organization and receiving organization.
 
 Email notification settings can be viewed and updated in the M-RETS user interface by clicking on the Org in the upper right corner, then navigating to the User table.
 
