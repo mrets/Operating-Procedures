@@ -15,4 +15,4 @@ https://macdown.uranusjr.com/ (Desktop app)
 # Development Setup
 
 * ```bundle install```
-* ```jeykll serve```
+* ```jekyll serve```
