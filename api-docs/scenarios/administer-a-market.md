@@ -7,12 +7,14 @@ The Market Administrator functionality was designed to support third parties spo
 To Register as Market Admin, please contact the System Admin.
 
 M-RETS has developed several endpoints specifically designed to meet Market Administrator's needs:
-* Get all active Participants
-* GET RECs (Market eligible)
-* Update Certificate Quantity status to encumbered to prevent transactions in the M-RETS system
-* Create a Market Transaction
+
+- Get all active Participants
+- GET RECs (Market eligible)
+- Update Certificate Quantity status to encumbered to prevent transactions in the M-RETS system
+- Create a Market Transaction
 
 ## Process
+
 The Market Administrator establishes a new “Market”. The Market Administrator must have their Participant Terms of Use approved by M-RETS and available for Participants to review at any time. See Operating Procedures for further details on the sign-up process, permissions, and other policies related to this account type in the M-RETS.
 
 1. The Market Administrator has the ability to invite an unlimited number of participants to this Market. Currently this part of the process is completed through the M-RETS interface. The Market Admin can select who to send invites to from a list of organizations in the M-RETS. The invites trigger email notifications for both parties. Participants can accept the invitation by logging into the M-RETS and clicking "Accept" on the notification. The list of Participants who have accepted the invite is available via API to the Market Administrator.
@@ -27,9 +29,10 @@ Purchased RECs would be deposited into the designated Active RECs account of the
 
 ### Get all active Participants
 
-	GET /v1/public/rec/organizations?filter[participates_in_market]=<market program uuid>
+    GET /v1/public/rec/organizations?filter[participates_in_market]=<market program uuid>
 
 ##### Response
+
 ```json
 {
     "data": [
@@ -51,16 +54,16 @@ Purchased RECs would be deposited into the designated Active RECs account of the
 }
 ```
 
-
 ## 2. Encumber/Unencumber a Certificate Quantity
 
 ### Get All RECs
 
 The general `GET RECs` call for a Market Admin will return all RECs in the M-RETS that are in any of the Market's Participants' Market Accounts.
 
-	GET v1/public/rec/certificate_quantities
+    GET v1/public/rec/certificate_quantities
 
 ##### Response
+
 ```json
 {
 {
@@ -94,9 +97,10 @@ The general `GET RECs` call for a Market Admin will return all RECs in the M-RET
 
 To return only the Certificates from a specific Participant's dedicated Market Account:
 
-	GET v1/public/rec/certificate_quantities?include=certificate&filter[organization]=<participant organization uuid>
+    GET v1/public/rec/certificate_quantities?include=certificate&filter[organization]=<participant organization uuid>
 
 ##### Response
+
 ```json
 {
 {
@@ -137,24 +141,24 @@ To return only the Certificates from a specific Participant's dedicated Market A
 By default, a certificate quantity when placed in a Market account will have a status of `unencumbered`. When the Market Admin is ready to post a certificate quantity on an external system, the certificate quantity status should be updated to `encumbered`.
 
     PUT v1/public/rec/....
-    
-#### Example
-```json
-{
- 
-}
-```
-##### Response
-    Status: 201 Created
-```json
-{
 
-}
+#### Example
+
+```json
+{}
 ```
-	
+
+##### Response
+
+    Status: 201 Created
+
+```json
+{}
+```
+
 ## 3. Create a Market Transaction
 
-Transfers in the M-RETS system are represented on a basic level by User Transactions and Transaction Details. The User Transaction captures important information about the transfer such as the transaction type, date the transaction was started/completed, and who started/completed the transaction. 
+Transfers in the M-RETS system are represented on a basic level by User Transactions and Transaction Details. The User Transaction captures important information about the transfer such as the transaction type, date the transaction was started/completed, and who started/completed the transaction.
 
 A `transfer` User Transaction could have one or many associated transaction details that represent the individual certificate quantities that were involved in the transaction. For example, if a user were to select 3 rows and complete a Market Transfer in the UI, that User Transaction would have three associated Transaction Details.
 
@@ -169,6 +173,7 @@ All transactions are initiated in the same way.
     POST v1/public/rec/user_transactions
 
 #### Example
+
 ```json
 {
   "data": {
@@ -179,8 +184,11 @@ All transactions are initiated in the same way.
   }
 }
 ```
+
 ##### Response
+
     Status: 201 Created
+
 ```json
 {
   "data": {
@@ -221,6 +229,7 @@ Transaction Details can be created into that draft User Transaction.
     POST v1/public/rec/transaction_details
 
 #### Example
+
 ```json
 {
   "data": {
@@ -233,7 +242,13 @@ Transaction Details can be created into that draft User Transaction.
       "user_transaction": {
         "data": {
           "type": "user_transactions",
-          "id": "<transaction uuid>"
+          "id": "<user_transaction uuid>"
+        }
+      },
+      "from_account": {
+        "data": {
+          "type": "accounts",
+          "id": "<from account uuid>"
         }
       },
       "to_organization": {
@@ -252,8 +267,11 @@ Transaction Details can be created into that draft User Transaction.
   }
 }
 ```
+
 #### Response
+
     Status: 201 Created
+
 ```json
 {
   "data": {
@@ -276,12 +294,14 @@ Transaction Details can be created into that draft User Transaction.
 
 One or many Certificates are specified. To view what the possible options are, the full list of Certificates with Active Certificate Quantities can be retrieved with this call:
 
-    GET /v1/public/rec/certificate_quantities?filter[status]=active&include=certificate
+    GET /v1/public/rec/certificate_quantities?filter[status]=active&include=certificate,account
 
 The available certificates come from the "For Sale" accounts of a participant organization.
 
 #### Response
+
     Status: 200 OK
+
 ```json
 {
   "data": [
@@ -316,13 +336,24 @@ The available certificates come from the "For Sale" accounts of a participant or
 }
 ```
 
-Then select a Certificate and include it in a post call like this:
+When selecting the Certificates to transfer, be sure to select the correct range that was 'Encumbered' for the transaction detail. There can be multiple Certificate Quantities in the same 'For Sale' source account with different statuses. Include the selected Certificate in a post call like this:
 
 ```json
 "certificate": {
   "data": {
     "type": "certificates",
     "id": "<certificate uuid>"
+  }
+}
+```
+
+Add the account you are selecting the Certificate Quantity from in the POST as well:
+
+```json
+"from_account": {
+  "data": {
+    "type": "accounts",
+    "id": "<account uuid>"
   }
 }
 ```
@@ -338,7 +369,9 @@ Find your Market's program uuid with this call:
     GET /v1/public/rec/programs?filter[is_market]=true
 
 ##### Response
+
     Status: 200 OK
+
 ```json
 {
   "data": [
@@ -381,6 +414,8 @@ Email notification settings can be viewed and updated in the M-RETS user interfa
 
 Once the draft transaction is completed it needs to be enqueued with this call:
 
-    PUT /v1/public/rec/user_transactions/<transaction uuid>/enqueue
+    PUT /v1/public/rec/user_transactions/<user_transaction uuid>/enqueue
+
 ##### Response
+
     Status: 200 OK
