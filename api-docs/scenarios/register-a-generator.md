@@ -8,13 +8,13 @@ Registering a generator in the M-RETS is the first step towards issuing certific
 
 Generators are complex entities with many associated objects that must be created before M-RETS is able to approve the generator. Only `approved` generators can issue certificates.
 
-Once a generator is `approved`, there is a subset of fields that if updated will automatically return the generator to a `pending` status and it will again need to be approved by the M-RETS System Administrator. 
+Once a generator is `approved`, there is a subset of fields that if updated will automatically return the generator to a `pending` status and it will again need to be approved by the M-RETS System Administrator.
 
 ## The Basic Call
 
 To initialize a generator in `draft` status, the only required field is the generator `facility_name`.
 
-Upon being initialized, the system will assign a sequential `mrets_id` to the generator. 
+Upon being initialized, the system will assign a sequential `mrets_id` to the generator.
 
 ```
 POST v1/public/rec/generators
@@ -89,21 +89,21 @@ The response will be
 ## Creating Associated Objects
 
 ### Contacts
-A generator has 3 associated contact objects including the Owner, Operator, and Mailing Address. To create these objects the call would look like this:
+
+A generator has 2 associated contact objects the Owner and Operator. To create these objects the call would look like this:
 
 ```
-POST /v1/public/rec/generators/:generator_id/owner
-POST /v1/public/rec/generators/:generator_id/operator
-POST /v1/public/rec/generators/:generator_id/mailing
+POST /v1/public/rec/contacts
 ```
 
-Payload Sample:
+Payload Sample for creating Owner:
+
 ```
 {
   "data": {
     "type": "contacts",
     "attributes": {
-      "name": "Name",
+      "name": "Owner Name",
       "street_1": "Street 1",
       "street_2": "Street 2",
       "city": "test",
@@ -113,58 +113,96 @@ Payload Sample:
       "phone": "000-111-1234",
       "url": "example.url.domain.com",
       "fax": "000-111-1234",
-      "email": "example.email@domain.com",
+      "email": "owner_example.email@domain.com",
       "job_title": "Job Title"
     }
   }
 }
 ```
 
+You will need to do an additional POST, using the format above, with the Operator details.
+
+Once you have both contacts created, each will have a unique contact ID under their contact "id" field.
+
+Use those to update the generator's relationships:
+
+PUT /v1/public/rec/generators/{{generator_id}}
+
+```
+{
+    "data": {
+        "id": "{{generator_id}}",
+        "type": "generators",
+       "relationships": {
+      "owner": {
+        "data": {
+          "type": "contacts",
+          "id": "{{owner's contact_id}}"
+        }
+      },
+      "operator": {
+        "data": {
+          "type": "contacts",
+          "id": "{{operator's contact_id}}"
+        }
+      }
+       }
+    }
+}
+'''
 ### Fuel Sources
-Generators are associated with a specific `fuel_source` through a `generator_fuel`. 
+Generators are associated with a specific `fuel_source` through a `generator_fuel`.
 
 To get the list of possible `fuel_sources`:
 
-``` 
+```
+
 GET v1/public/rec/fuel_sources
-```
-
-To add the generator_fuel `biomass` to a generator, the call would look like this: 
 
 ```
+
+To add the generator_fuel `biomass` to a generator, the call would look like this:
+
+```
+
 POST v1/public/rec/generator_fuels
 
 {
-  "data": {
-    "type": "generator_fuels",
-    "attributes": {
-      "label": "Test 1"
-    },
-    "relationships": {
-      "fuel_source": { "data": { "type": "fuel_sources", "id": "00000000-0000-0000-0000-000000000001"  } },
-      "generator": { "data": { "type": "generators", "id": "15500fff-8b41-478b-acaf-f4e9a3993b80" } }
-    }
-  }
+"data": {
+"type": "generator_fuels",
+"attributes": {
+"label": "Test 1"
+},
+"relationships": {
+"fuel_source": { "data": { "type": "fuel_sources", "id": "00000000-0000-0000-0000-000000000001" } },
+"generator": { "data": { "type": "generators", "id": "15500fff-8b41-478b-acaf-f4e9a3993b80" } }
 }
+}
+}
+
 ```
 
 ### Eligibilities
-A generator can have one or many associated `eligibilities`. 
+A generator can have one or many associated `eligibilities`.
 
 The full list of possible eligibilities can be retrieved with this call:
 
 ```
+
 v1/public/rec/eligibilities
+
 ```
 
 To add the `MN` and `ND` eligibilities to a generator:
- 
- ```
+
+```
+
 POST /v1/public/rec/generator_fuels/2dc6c99e-30fe-420e-ad3d-03a8b94c40eb/relationships/eligibilities
 
 {
-  "data": [{ "type": "eligibilities", id: {eligib_id} }]
+"data": [{ "type": "eligibilities", id: {eligib_id} }]
 }
+
 ```
 
 ###
@@ -173,20 +211,24 @@ A generator has one reporting entity. This can either be `Self Reporting` or ano
 To designate a generators self-reporting:
 
 ```
+
 GET /v1/public/rec/generators/00080670-ce1c-4e2d-8a1b-0b97fd4d716f/relationships/reporting_entity
 
 {
-  "data": [{ "type": "organizations", id: {owner_org_id} }]
+"data": [{ "type": "organizations", id: {owner_org_id} }]
 }
+
 ```
 
 To designate another organization as the reporting entity:
 ```
+
 PUT /v1/public/rec/generators/00080670-ce1c-4e2d-8a1b-0b97fd4d716f/relationships/reporting_entity
 
 {
-  "data": [{ "type": "organizations", id: {org_id} }]
+"data": [{ "type": "organizations", id: {org_id} }]
 }
+
 ```
 
 ## Generator State
@@ -194,17 +236,19 @@ PUT /v1/public/rec/generators/00080670-ce1c-4e2d-8a1b-0b97fd4d716f/relationships
 As mentioned above, a generator only requires the `name` to be saved in `draft` status. Before a generator can be submitted to be reviewed by the M-RETS System Admin, it must include all required fields (see swagger file for further details on which fields are required). To submit a generator for review, change the status to `pending`.
 
 ```
+
 PUT v1/public/rec/generators/{org_id}
 
 {
-  "data": {
-	  "id": "{org_id}", 
-	  "type": "generators", 
-	  "attributes": {
-	  	"status": "active"
-	  }
-  }
+"data": {
+"id": "{org_id}",
+"type": "generators",
+"attributes": {
+"status": "active"
 }
+}
+}
+
 ```
 
 ## Ownership Types
@@ -212,17 +256,20 @@ PUT v1/public/rec/generators/{org_id}
 The possible Ownership Types for generators are as follows:
 
 ```
-  ['Corporate Owner',
-   'Electric Service Provider',
-   'Federal Marketer/Power Administrator',
-   'Independent Power Producer',
-   'Investor-Owned Utility',
-   'Irrigation District',
-   'Municipal Utility',
-   'Privately Owned Distributed Generation',
-   'Rural Electric Cooperative',
-   'Tribal Organization',
-   'Other']
+
+['Corporate Owner',
+'Electric Service Provider',
+'Federal Marketer/Power Administrator',
+'Independent Power Producer',
+'Investor-Owned Utility',
+'Irrigation District',
+'Municipal Utility',
+'Privately Owned Distributed Generation',
+'Rural Electric Cooperative',
+'Tribal Organization',
+'Other']
+
 ```
 
 After it has been successfully reviewed by the M-RETS System Admin, the generator will be updated with a status of `approved` as well as an `effective_date`.
+```

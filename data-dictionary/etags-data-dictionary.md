@@ -1,23 +1,24 @@
-#eTags Data Dictionary
-| Name | Data Field | Description |
-|---------------------------------------|---------------------------|-------------|
-|Details|details|The details schema defined on the Eligibility. ("details*schema") |
-|Start Date|start_date|datetime - The first date this Generator is eligible for the selected Program. Note: If your Generator does not have an specific Start Date, use the Generator's online date.*|
-|Stop Date|stop_date|datetime |
-|Generator|generator_id| ID of associated Generator|
-|Load|load|string- Demand on the grid/Consumer use|
-|Load Control Area|load_control_area|string- Area that manages grid|
-|Generator Control Area|generator_control_area|string- The generators electrical power system control area|
-|Total|total|integer- Total|
-|Total unit|total_unit|string- total unit|
-|Matched|matched|integer- Matched|
-|Matched Unit|matched_unit|string- Matched Unit|
-|Transferred|transferred|integer- Transferred|
-|Transferred Unit|transferred_unit|string- Transferred unit|
-|Remaining|remaining|integer- Amount remaining|
-|Remaining Unit|remaining_unit|string- Remaining unit|
-|Miscellaneous Token|miscellaneous_token|string- Misc. token|
-|Generator Id|generator_id|Generator's ID from in the system|
-|Importing_organization_id|organization_id|ID for the importing organization|
-|Created at|created_at|datetime Etag was created|
-|Updated at|updated_at|datetime update was made|
+<!-- # Etags Data Dictionary
+
+| Name                      | Data Field             | Description                                                                                                                                                                     |
+| ------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Details                   | details                | The details schema defined on the Eligibility. ("details\*schema")                                                                                                              |
+| Start Date                | start_date             | datetime - The first date this Generator is eligible for the selected Program. Note: If your Generator does not have an specific Start Date, use the Generator's online date.\* |
+| Stop Date                 | stop_date              | datetime                                                                                                                                                                        |
+| Generator                 | generator_id           | ID of associated Generator                                                                                                                                                      |
+| Load                      | load                   | string- Demand on the grid/Consumer use                                                                                                                                         |
+| Load Control Area         | load_control_area      | string- Area that manages grid                                                                                                                                                  |
+| Generator Control Area    | generator_control_area | string- The generators electrical power system control area                                                                                                                     |
+| Total                     | total                  | integer- Total                                                                                                                                                                  |
+| Total unit                | total_unit             | string- total unit                                                                                                                                                              |
+| Matched                   | matched                | integer- Matched                                                                                                                                                                |
+| Matched Unit              | matched_unit           | string- Matched Unit                                                                                                                                                            |
+| Transferred               | transferred            | integer- Transferred                                                                                                                                                            |
+| Transferred Unit          | transferred_unit       | string- Transferred unit                                                                                                                                                        |
+| Remaining                 | remaining              | integer- Amount remaining                                                                                                                                                       |
+| Remaining Unit            | remaining_unit         | string- Remaining unit                                                                                                                                                          |
+| Miscellaneous Token       | miscellaneous_token    | string- Misc. token                                                                                                                                                             |
+| Generator Id              | generator_id           | Generator's ID from in the system                                                                                                                                               |
+| Importing_organization_id | organization_id        | ID for the importing organization                                                                                                                                               |
+| Created at                | created_at             | datetime Etag was created                                                                                                                                                       |
+| Updated at                | updated_at             | datetime update was made                                                                                                                                                        | -->

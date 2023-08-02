@@ -10,12 +10,12 @@ We regularly update and improve the experience and resources available in the AP
 
 The M-RETS API provides nearly all of the functionality available through the platform's user interface. This includes but is not limited to:
 
-* Retrieving your full inventory of active and retired RECs
-* Creating and updating generators
-* Submitting generation data and issuing RECs
-* Completing an internal, external, export transaction
-* Retiring certificates for voluntary or compliance purposes
-* Participating in a program
+- Retrieving your full inventory of active and retired RECs
+- Creating and updating generators
+- Submitting generation data and issuing RECs
+- Completing an internal, external, export transaction
+- Retiring certificates for voluntary or compliance purposes
+- Participating in a program
 
 ## What is required to use the M-RETS API?
 
@@ -25,7 +25,7 @@ M-RETs requires that all API users be part of a registered organization with a G
 
 To gain access to our API, we recommend the following steps:
 
-1. Request access to the M-RETS sandbox by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSebmAyf6cNc1GAcYASXcbU3vwHwHGG-jUNReQQdc0ii-k_Pwg/viewform).
+1. Users with a General Account Subscription can request access to the M-RETS sandbox by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSebmAyf6cNc1GAcYASXcbU3vwHwHGG-jUNReQQdc0ii-k_Pwg/viewform).
 2. We will create test organizations for your team to use and send you the credentials. You are free to generate new API keys and user’s access tokens.
 3. Find the documentation, libraries, code examples, and other resources that you need to make your first successful request.
 
@@ -43,17 +43,17 @@ Select Postman files can be downloaded for many API endpoints.
 
 To use these Postman collections, the `API_TOKEN` environment variable should be set to your sandbox api token.
 
-* [Accounts](https://m-rets-sandbox.herokuapp.com/postman-collections/Accounts.postman_collection.json)
-* [Certificate Quantities](https://m-rets-sandbox.herokuapp.com/postman-collections/Certificate-Quantities.postman_collection.json)
-* [Fuel Sources](https://m-rets-sandbox.herokuapp.com/postman-collections/Fuel-Sources.postman_collection.json)
-* [Generation Entry](https://m-rets-sandbox.herokuapp.com/postman-collections/Generation-Entry.postman_collection.json)
-* [Generator Fuel](https://m-rets-sandbox.herokuapp.com/postman-collections/Generator-Fuel.postman_collection.json)
-* [Generators](https://m-rets-sandbox.herokuapp.com/postman-collections/Generators.postman_collection.json)
-* [Organizations](https://m-rets-sandbox.herokuapp.com/postman-collections/Organizations.postman_collection.json)
-* [Recurring Transfer](https://m-rets-sandbox.herokuapp.com/postman-collections/Recurring-Transfer.postman_collection.json)
-* [Retirement Option](https://m-rets-sandbox.herokuapp.com/postman-collections/Retirement-Option.postman_collection.json)
-* [Transaction Details](https://m-rets-sandbox.herokuapp.com/postman-collections/Transaction-Details.postman_collection.json)
-* [User Transactions](https://m-rets-sandbox.herokuapp.com/postman-collections/User-Transactions.postman_collection.json)
+- [Accounts](https://m-rets-sandbox.herokuapp.com/postman-collections/Accounts.postman_collection.json)
+- [Certificate Quantities](https://m-rets-sandbox.herokuapp.com/postman-collections/Certificate-Quantities.postman_collection.json)
+- [Fuel Sources](https://m-rets-sandbox.herokuapp.com/postman-collections/Fuel-Sources.postman_collection.json)
+- [Generation Entry](https://m-rets-sandbox.herokuapp.com/postman-collections/Generation-Entry.postman_collection.json)
+- [Generator Fuel](https://m-rets-sandbox.herokuapp.com/postman-collections/Generator-Fuel.postman_collection.json)
+- [Generators](https://m-rets-sandbox.herokuapp.com/postman-collections/Generators.postman_collection.json)
+- [Organizations](https://m-rets-sandbox.herokuapp.com/postman-collections/Organizations.postman_collection.json)
+- [Recurring Transfer](https://m-rets-sandbox.herokuapp.com/postman-collections/Recurring-Transfer.postman_collection.json)
+- [Retirement Option](https://m-rets-sandbox.herokuapp.com/postman-collections/Retirement-Option.postman_collection.json)
+- [Transaction Details](https://m-rets-sandbox.herokuapp.com/postman-collections/Transaction-Details.postman_collection.json)
+- [User Transactions](https://m-rets-sandbox.herokuapp.com/postman-collections/User-Transactions.postman_collection.json)
 
 ### Data Dictionaries
 
@@ -65,4 +65,4 @@ Subscribe to our API newsletter for updates on the latest developments related t
 
 ### Slack Support Channel
 
-Request single channel access to the M-RETS Slack API Support channel by contacting [systemadmin@mrets.org](mailto:systemadmin@mrets.org).
+Request single channel access to the M-RETS Slack API Support channel by contacting [apisupport@mrets.org](mailto:apisupport@mrets.org).

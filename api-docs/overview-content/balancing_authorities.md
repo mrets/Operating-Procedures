@@ -1,4 +1,4 @@
-# Balancing Authority Overview
+# Balancing Authorities
 
 The responsible entity that integrates resource plans ahead of time, maintains load-interchange-generation balance within a balancing authority area, and supports interconnection frequency in real time.
 
