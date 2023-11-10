@@ -1,2 +1,2 @@
-# distributed-generation-groups
-In the makings
+# Distributed generation groups
+TODO
