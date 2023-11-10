@@ -1,2 +1,0 @@
-# Distributed generation groups
-TODO
