@@ -1,3 +1,6 @@
-# Balancing Authorities
+# Balancing authorities
 
-TODO - In the making
+| Name | Data Field | Description                 |
+| ---- | ---------- | --------------------------- |
+| Code | code       | Balancing Authority Code    |
+| Name | name       | Name of Balancing Authority |
