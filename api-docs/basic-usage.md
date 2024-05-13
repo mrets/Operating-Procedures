@@ -2,28 +2,28 @@
 
 ## Authentication
 
-Bearer Authentication is the authentication method for authenticating with the M-RETS API.
+M-RETS API access is authenticated via API Token. Tokens are managed by users with API permissions in the M-RETS portal.  
 
 ### How To Use
 
 Here's an example of how the curl request should look with your API token entered:
 
 ```
-curl --location --request GET 'https://app.mrets.org/v1/public/accounts' \
+curl --location --request GET '{{base_url}}/v1/public/accounts' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --header 'X-Api-Key: <token>'
 ```
  
 ## Pagination
 
-Instead of returning the full result set when the user asks for it, we can break it into smaller pages of data. That way the server never needs to serialize every resource in the system at once.
+Instead of returning the full result set when the user asks for it, we can break it into smaller pages of data. That way the server never needs to serialize every resource in the system at once. This approach, paired with filtering (see below), is recommended for endpoints with large quantities of results such as transaction_details. 
 
 You can use `page[number]` and `page[size]` in the query string to control which page you are viewing. The maximum current page size is 1000.
 
 **For example**
 
 ```
-https://m-rets-sandbox.herokuapp.com/v1/public/generators?page[number]=2&page[size]=30
+{{base_url}}/v1/public/generators?page[number]=2&page[size]=30
 ```
 
 This will allow you to iterate over the next links to fetch the full results set without putting extreme pressure on your server.
@@ -33,9 +33,9 @@ The reponse will contain a `links` section, which has URIs for the first, next, 
 
 ```
 "links": {
-       "first": "https://m-rets-sandbox.herokuapp.com/v1/public/generators?page[number]=1&page[size]=30",
-       "next": "https://m-rets-sandbox.herokuapp.com/v1/public/generators?page[number]=2&page[size]=30",
-       "last": "https://m-rets-sandbox.herokuapp.com/v1/public/generators?page[number]=6&page[size]=30"
+       "first": "{{base_url}}/v1/public/generators?page[number]=1&page[size]=30",
+       "next": "{{base_url}}/v1/public/generators?page[number]=2&page[size]=30",
+       "last": "{{base_url}}/v1/public/generators?page[number]=6&page[size]=30"
 }
 ```   
 ## Filtering
@@ -47,7 +47,7 @@ We can use filters to query an end point by the value of an attribute.
 For example
 
 ```
-https://m-rets-sandbox.herokuapp.com/v1/public/generators?filters[status]=draft
+{{base_url}}/v1/public/generators?filters[status]=draft
 ```
 
 Please see the specific endpoint in our documentation to see which filters are available.
@@ -60,19 +60,19 @@ By default, all attributes are sortable and the order is ascending.
 
 For example
 
-https://m-rets-sandbox.herokuapp.com/v1/public/generators?sort=state_province
+{{base_url}}/v1/public/generators?sort=state_province
 
-Multiple attributes filtering is also allowed, a comma-separated list sould be provided.
+Multiple attributes filtering is also allowed. A comma-separated list sould be provided.
 
-https://m-rets-sandbox.herokuapp.com/v1/public/accounts?sort=status,name
+{{base_url}}/v1/public/accounts?sort=status,name
 
 To use descending order you need to put - in front of the corresponding attribute.
 
-https://m-rets-sandbox.herokuapp.com/v1/public/accounts?sort=status,-name
+{{base_url}}/v1/public/accounts?sort=status,-name
 
 ## Date and Timestamp Format
 
-We use the standard [ISO 8601](https://www.w3.org/TR/NOTE-datetime) format for all of our dates and timestamps.
+M-RETS uses the standard [ISO 8601](https://www.w3.org/TR/NOTE-datetime) format for all of our dates and timestamps.
 
 ### Complete date
 YYYY-MM-DD (eg 1997-07-16)  
