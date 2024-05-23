@@ -57,7 +57,7 @@ For a retirement, the transaction type should be `retirement`.
 
 The destination on a retirement should be a Retirement Account within the same organization. To view what the possible options are, the full list of Retirement Accounts can be retrieved with this call:
 
-    POST /v1/public/rec/accounts?filter[account_type]=retirement&filter[status]=open
+    GET /v1/public/rec/accounts?filter[account_type]=retirement&filter[status]=open
 
 ##### Response
     Status: 200 OK
@@ -82,7 +82,7 @@ The destination on a retirement should be a Retirement Account within the same o
 }
 ```
 
-Then select a Retirement Account and include it in a post call like this:
+Then select a Retirement Account and include it in a POST call like this:
 
 ```json
 "to_account": {
@@ -136,6 +136,10 @@ Then select the required Retirement Option and include it in a post call like th
 
 On the User Transaction object, the value of `retirement_type` should match the `name` from the selected `retirement_option`.
 The `retirement_reason` values should match one of the values from the `reason` field on the selected `retirement_option` (if available)The `retired_to` from the user transaction requires a State/Province abbreviation from the specify country on the `retired_to` from the `retirement_option` (if the value is `all` then all Countries are allowed).
+
+Once the user transaction and transaction details are set up with the necessary details, enqueue the user_transaction to submit it using this call: 
+
+```{{mrets_url}}/v1/public/rec/user_transactions/{{user_transaction_id}}/enqueue```
 
 The M-RETS platform also sends out email notifications to both the sending organization and destination organization.
 
