@@ -228,7 +228,15 @@ Then select an Active Account and include it in a post call like this:
   }
 }
 ```
+### Enqueue Transaction
 
+Once the draft transaction details are completed the user transaction needs to be enqueued with this call to submit it:
+
+    PUT /v1/public/rec/user_transactions/<user transaction uuid>/enqueue
+    
+##### Response
+    Status: 200 OK
+    
 ## Initiating an External Transfer
 
 All transactions are initiated in the same way. See [Drafting a transaction](#drafting-a-transaction)
@@ -352,9 +360,10 @@ Email notification settings can be viewed and updated in the M-RETS user interfa
 
 ### Enqueue Transaction
 
-Once the draft transaction is completed it needs to be enqueued with this call:
+Once the draft transaction details are completed the user transaction needs to be enqueued with this call to submit it:
 
-    PUT /v1/public/rec/user_transactions/<transaction uuid>/enqueue
+    PUT /v1/public/rec/user_transactions/<user transaction uuid>/enqueue
+    
 ##### Response
     Status: 200 OK
 
