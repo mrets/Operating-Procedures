@@ -15,7 +15,7 @@ Generation submission occurs through the creation of a generation entry. The sys
 To create a generation entry:
 
 ```
-POST v1/public/rec/generation-entries
+POST v1/public/rec/generation_entries
 ```
 
 Here is an example with multiple `fuel_types` uploading 1 MWh (quantity). The allocation of all fuel types should sum to 1.0 (this is 100% allocated):
