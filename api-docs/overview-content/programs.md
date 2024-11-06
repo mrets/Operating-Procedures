@@ -9,7 +9,7 @@ Users may create rules around any subset or all the following attribute areas, h
 - Generator Location [Generator must originate in one of the selected state/provinces]
 - Fuel Types [Certificates must meet AT LEAST one fuel type]
 - Generators [Certificates must come from AT LEAST one of the selected Generators]
-- 
+
 ## Establishing a Program
 Users can create a Program for internal use or can invite other M-RETS Organizations to participate.
 Any User within a General Account Subscription Organization that has Program manage permissions can create an Internal Program. Only Organizations that create Internal Programs can use and view the Program. Any Account created as part of the Internal Program will be subject to the associated Program Ruleset.
