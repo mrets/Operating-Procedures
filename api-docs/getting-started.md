@@ -19,15 +19,19 @@ The M-RETS API provides nearly all of the functionality available through the pl
 
 ## What is required to use the M-RETS API?
 
-M-RETs requires that all API users be part of a registered organization with a General Account subscription in good standing.
+M-RETS requires that all API users and Sandbox participants be part of a registered organization with a General Subscription in good standing.
 
 ## How to get started
 
-To gain access to our API, we recommend the following steps:
+If you are interested in testing and utilizing M-RETS API but do not currently have a General Subscription in M-RETS, please email systemadmin@mrets.org to discuss registration options or changes. 
+
+If you have a General Subscription in M-RETS and would like to gain access to our API, we recommend the following steps:
 
 1. Request access to the M-RETS sandbox by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSebmAyf6cNc1GAcYASXcbU3vwHwHGG-jUNReQQdc0ii-k_Pwg/viewform).
 2. We will create test organizations for your team to use and send you the credentials. You are free to generate new API keys and user’s access tokens.
 3. Find the documentation, libraries, code examples, and other resources that you need to make your first successful request.
+
+
 
 ## Resources
 
@@ -62,7 +66,3 @@ Our data dictionaries can be found embedded in the documentation for our individ
 ### Newsletter
 
 Subscribe to our API newsletter for updates on the latest developments related to our API. Sign-up [here](https://www.mrets.org/api/).
-
-### Slack Support Channel
-
-Request single channel access to the M-RETS Slack API Support channel by contacting [systemadmin@mrets.org](mailto:systemadmin@mrets.org).
