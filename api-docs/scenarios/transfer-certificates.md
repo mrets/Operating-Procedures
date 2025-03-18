@@ -382,7 +382,22 @@ Once identifying a transaction that requires action, below are the possible ways
 
 ### Accepting an External Transfer
 
-    PUT /v1/public/rec/user_transactions/<transaction uuid>/accept
+    PUT /v1/public/rec/user_transactions/<user_transaction uuid>/accept
+In the body of the request, specify an Active Account to deposit the incoming certificates in and include it in the PUT call like this:
+
+```json
+{
+	"data": {
+        "attributes": {
+            "to_account": {  
+                    "type": "accounts",
+                    "id": "<account_id>"
+                }
+            }
+	}
+}
+```
+
 ##### Response
     Status: 200 OK
 
