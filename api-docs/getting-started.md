@@ -19,7 +19,7 @@ The M-RETS API provides nearly all of the functionality available through the pl
 
 ## What is required to use the M-RETS API?
 
-M-RETS requires that all API users and Sandbox participants be part of a registered organization with a General Subscription in good standing.
+CleanCounts requires that all API users and Sandbox participants be part of a registered organization with a General Subscription in good standing.
 
 
 ## How to get started
