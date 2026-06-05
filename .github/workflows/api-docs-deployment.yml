@@ -27,7 +27,7 @@ jobs:
             git reset --hard origin/develop
             git checkout -b mrets-testing
             
-            git config --global user.email "sofia.paoli@tarmac.io
+            git config --global user.email "sofia.paoli@tarmac.io"
 
             git config --global user.name ${{ github.actor }}
             git commit --allow-empty -m "Update changes from the operating-procedures repository"
