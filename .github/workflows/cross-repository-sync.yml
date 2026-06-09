@@ -6,10 +6,8 @@ on:
       - master
       
 env:
-    REPOSITORY: mrets/api-docs
     BRANCH: MRETS-sync-operating-procedures-dependency
     RELEASE_BRANCH: develop-into-master-operating-procedures
-
 
 jobs:
   open_pr:
@@ -19,7 +17,7 @@ jobs:
      - name: Clone the repository
        uses: actions/checkout@v6
        with:
-        repository: ${{ env.REPOSITORY}}
+        repository: ${{ secrets.REPOSITORY}}
         token: ${{ secrets.EXTERNAL_REPO_TOKEN }}
         ref: develop
         fetch-depth: 0
