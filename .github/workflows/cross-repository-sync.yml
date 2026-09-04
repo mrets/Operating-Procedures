@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - MRETS-27736
       
 env:
     BRANCH: MRETS-sync-operating-procedures-dependency
