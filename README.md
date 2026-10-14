@@ -14,5 +14,17 @@ https://macdown.uranusjr.com/ (Desktop app)
 
 # Development Setup
 
+## Docker
+
+```bash
+docker compose up --build
+```
+
+Open http://localhost:4000. The first build can take several minutes while gems install.
+
+On Linux, if file watching fails, override the command to add `--force_polling`.
+
+## Local Ruby
+
 * ```bundle install```
 * ```jekyll serve```
