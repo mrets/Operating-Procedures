@@ -6,21 +6,20 @@ Certificates are retired when the owner wants to make some kind of environmental
 
 ## Notes About the Entity
 
-Retirements in the M-RETS system are represented on a basic level by User Transactions and Transaction Details. The User Transaction captures important information about the retirement such as the transaction type, the date the transaction was started/completed, who started/completed the transaction, and important details related to the retirement.
+Retirements in the M-RETS system are represented on a basic level by **User Transactions** and **Transaction Details**. The User Transaction is created first and captures important information about the retirement such as the transaction type, the date the transaction was started/completed, who started/completed the transaction, and important details related to the retirement.
 
-A retirement User Transaction could have one or many associated transaction details that represent the individual certificate quantities that were involved in the retirement. For example, if a user were to select 3 rows to be retired in the UI, that User Transaction would have three associated Transaction Details.
-
-A Retirement Transaction only involves one step. A user initiates a retirement and it will immediately be completed requiring no additional steps.
-
+A retirement User Transaction could have one or many associated Transaction Details that represent the individual certificate quantities that were involved in the retirement. For example, if a user were to select 3 rows to be retired in the UI, that User Transaction would have three associated Transaction Details.
 
 ## Initiating a Retirement
 
-### Selecting Certificates
-
 All transactions are initiated in the same way. One or many Certificate Quantities are specified.
 
-    POST /v1/public/rec/user_transactions
-##### Example
+### Step 1: POST a `user_transaction`
+
+`POST /v1/public/rec/user_transactions`
+
+**Example**
+
 ```json
 {
   "data": {
@@ -45,22 +44,165 @@ All transactions are initiated in the same way. One or many Certificate Quantiti
 }
 ```
 
-### Specifying the Transaction Type
+#### Specifying the Transaction Type
 
 For a retirement, the transaction type should be `retirement`.
 
 ```json
-  "transaction_type": "retirement"
+"transaction_type": "retirement"
 ```
 
-### Specifying the Retirement Account
+#### Specifying the Retirement Options
 
-The destination on a retirement should be a Retirement Account within the same organization. To view what the possible options are, the full list of Retirement Accounts can be retrieved with this call:
+To view valid retirement options, this call can be used:
 
-    GET /v1/public/rec/accounts?filter[account_type]=retirement&filter[status]=open
+`GET /v1/public/rec/retirement_options`
 
-##### Response
-    Status: 200 OK
+**Response**
+
+`Status: 200 OK`
+
+```json
+{
+  "data": [
+    {
+      "id": "<retirement option uuid>",
+      "type": "retirement_options",
+      "links": {...},
+      "attributes": {
+        "resource_type": "rec",
+        "name": "State/Provincial Portfolio Standards",
+        "reason": null,
+        "retired_to": "all",
+        "quarter": false,
+        "description": null,
+        "compliance_period": true,
+        "main_reason": "compliance"
+      }
+    },
+    {...}
+  ]
+}
+```
+
+Choose the desired Retirement Option `id` and include it in the initial `user_transaction` POST, or update via a PUT request like this:
+
+```json
+"retirement_option": {
+  "data": {
+    "type": "retirement_options",
+    "id": "<retirement option uuid>"
+  }
+}
+```
+
+On the User Transaction object:
+
+- The value of `retirement_type` should match the `name` from the selected `retirement_option`.
+- The `retirement_reason` value should match one of the values from the `reason` field on the selected `retirement_option` (if available).
+- The `retired_to` value on the user transaction requires a State/Province abbreviation from the country specified in the `retired_to` field of the `retirement_option`. If the value is `all`, then all countries are allowed.
+
+A successful POST of the `user_transaction` will return a `201 Created` response.
+
+`Status: 201 CREATED`
+
+Note the `user_transaction` uuid and proceed to the next step.
+
+```json
+{
+    "data": {
+        "id": "<user transaction uuid>",
+        "type": "user_transactions",
+        "attributes": {
+            "transaction_type": "retirement",
+            "created_at": "2026-10-19T17:07:58Z",
+            "updated_at": "2026-10-19T17:07:58Z",
+            "status": "draft",
+            "retirement_type": "State/Provincial Portfolio Standards",
+            "started_at": null,
+            "ended_at": null,
+            "compliance_period": "2024",
+            "retired_to": "MN",
+            "notes": "test",
+            "retired_quarter": "Q2",
+            "retirement_reason": "null",
+            "retirement_kind": "compliance",
+            "export_system": null,
+            "export_organization_name": null,
+            "export_organization_id": null,
+            "hourly_claim": false
+        }
+            }
+}
+```
+
+### Step 2: POST `transaction_details`
+
+`POST {{mrets_url}}/v1/public/rec/transaction_details`
+
+**Example**
+
+```json
+{
+    "data": {
+        "attributes": {
+            "serial_number_start": <integer>,
+            "serial_number_end": <integer>
+        },
+        "relationships": {
+            "user_transaction": {
+                "data": {
+                    "type": "user_transactions",
+                    "id": "<user transaction uuid>"
+                }
+            },
+            "certificate": {
+                "data": {
+                    "type": "certificates",
+                    "id": "<certificate uuid>"
+                }
+            },
+            "from_account": {
+                "data": {
+                    "type": "accounts",
+                    "id": "<from account uuid>"
+                }
+            },
+            "to_account": {
+                "data": {
+                    "type": "accounts",
+                    "id": "<to account uuid>"
+                }
+            },
+            "to_organization": {
+                "data": {
+                    "type": "organizations",
+                    "id": "<to organization uuid>"
+                }
+            }
+        },
+        "type": "transaction_details"
+    }
+}
+
+```
+
+#### Specifying the Certificates
+
+To view the full list of active certificate quantities and retrieve their certificate id and account id (`from_account`), call:
+
+`GET /v1/public/rec/certificate_quantities?include=account,certificate&filter[status]=active`
+
+#### Specifying the Retirement Account (`to_account`)
+
+The destination on a retirement should be a Retirement Account within the same organization. To view the possible options, the full list of Retirement Accounts can be retrieved with this call:
+
+`GET /v1/public/rec/accounts?filter[account_type]=retirement&filter[status]=open`
+
+**Response**
+
+`Status: 200 OK`
+
 ```json
 {
   "data": [
@@ -93,53 +235,11 @@ Then select a Retirement Account and include it in a POST call like this:
 }
 ```
 
-### Specifying the Retirement Options
+### Step 3: Enqueue the `user_transaction`
 
-To view valid retirement options, this call can be used:
+Once the user transaction and transaction details are set up with the necessary details, enqueue the `user_transaction` to submit it using this call:
 
-    GET /v1/public/rec/retirement_options
-##### Response
-    Status: 200 OK
-```json
-{
-  "data": [
-    {
-      "id": "<retirement option uuid>",
-      "type": "retirement_options",
-      "links": {...},
-      "attributes": {
-        "resource_type": "rec",
-        "name": "State/Provincial Portfolio Standards",
-        "reason": null,
-        "retired_to": "all",
-        "quarter": false,
-        "description": null,
-        "compliance_period": true,
-        "main_reason": "compliance"
-      }
-    },
-    {...}
-  ]
-}
-```
-
-Then select the required Retirement Option and include it in a post call like this:
-
-```json
-"retirement_option": {
-  "data": {
-    "type": "retirement_options",
-    "id": "<retirement option uuid>"
-  }
-}
-```
-
-On the User Transaction object, the value of `retirement_type` should match the `name` from the selected `retirement_option`.
-The `retirement_reason` values should match one of the values from the `reason` field on the selected `retirement_option` (if available)The `retired_to` from the user transaction requires a State/Province abbreviation from the specify country on the `retired_to` from the `retirement_option` (if the value is `all` then all Countries are allowed).
-
-Once the user transaction and transaction details are set up with the necessary details, enqueue the user_transaction to submit it using this call: 
-
-```{{mrets_url}}/v1/public/rec/user_transactions/{{user_transaction_id}}/enqueue```
+`PUT {{mrets_url}}/v1/public/rec/user_transactions/{{user_transaction_id}}/enqueue`
 
 The M-RETS platform also sends out email notifications to both the sending organization and destination organization.
 
