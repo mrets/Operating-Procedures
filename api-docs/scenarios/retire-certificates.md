@@ -58,7 +58,7 @@ To view valid retirement options, this call can be used:
 
 `GET /v1/public/rec/retirement_options`
 
-**Response**
+**Example Response**
 
 `Status: 200 OK`
 
@@ -135,6 +135,50 @@ Note the `user_transaction` uuid and proceed to the next step.
             }
 }
 ```
+#### Validating the Retirement Option
+
+To validate that the correct `retirement_option` is associated with a `user_transaction`, use either of the following endpoints.
+
+**Relationship endpoint:** returns only the resource identifier (`type` and `id`). Use this when you just need to confirm which retirement option is linked.
+
+`GET {{mrets_url}}/v1/public/rec/user_transactions/{{id}}/relationships/retirement_option`
+
+```json
+{
+    "data": {
+        "type": "retirement_options",
+        "id": "<retirement option uuid>"
+    }
+}
+```
+
+**Related resource endpoint:** returns the full `retirement_options` resource, including its attributes. Use this when you need details such as the name or reason.
+
+`GET {{mrets_url}}/v1/public/rec/user_transactions/{{id}}/retirement_option`
+
+```json
+{
+    "data": {
+        "id": "<<retirement_options uuid>>",
+        "type": "retirement_options",
+        "links": {
+            "self": "{{mrets_url}}/v1/public/rec/retirement_options/<retirement option uuid>"
+        },
+        "attributes": {
+            "resource_type": "rec",
+            "name": "Green-e Energy Certified Voluntary Market Sale",
+            "reason": ["Green Electricity Program", "REC Only", "Utility Green Pricing Program"],
+            "retired_to": null,
+            "quarter": false,
+            "description": "...",
+            "compliance_period": true,
+            "main_reason": "voluntary"
+        }
+    }
+}
+```
+
+> **Note:** `?include=retirement_option` on the `user_transactions` endpoint does not currently return the retirement option in `included`. Use the related resource endpoint instead.
 
 ### Step 2: POST `transaction_details`
 
