@@ -4,8 +4,6 @@ M-RETS API provides tools and resources that enable our users to complete many t
 
 This page describes what’s possible to build with our available tools and APIs and how to get the access and information that you need to get started.
 
-We regularly update and improve the experience and resources available in the API docs. To stay informed of any updates, sign-up for our newsletter [here](https://www.mrets.org/api/).
-
 ## What can be done with the M-RETS API?
 
 The M-RETS API provides nearly all of the functionality available through the platform's user interface. This includes but is not limited to:
